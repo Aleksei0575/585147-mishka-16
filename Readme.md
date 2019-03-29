@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Чудновец](https://up.htmlacademy.ru/adaptive/16/user/585147).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Зубов](serj@zsa-studio.ru).
 
 ---
 
