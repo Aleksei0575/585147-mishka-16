@@ -3,10 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <meta name="keywords" content="милые штучки, милые игрушки, ручная работа, игрушки ручной работы, милые вещи для дома ручной работы, предметы интерьера, детские игрушки, вязаные корзинки">
+    <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+    <!-- Блок шапки сайта -->
+    <header class="main-header">
+      <!-- Логотип сайта -->
+      <a class="main-header__logo" href="">
+        <img class="main-header__logo-image" src="img/mishka-logo-mobile.png" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
+      </a>
+      <!-- Блок с меню -->
+      <nav class="main-navigation">
+        <!-- Кнопка открывающая меню -->
+        <button class="main-navigation__button" type="button">Открыть меню</button>
+        <!-- Центровщик для элементов меню -->
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Корзина: <span>пока пуста</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
