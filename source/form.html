@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <meta name="keywords" content="милые штучки, милые игрушки, ручная работа, игрушки ручной работы, милые вещи для дома ручной работы, предметы интерьера, детские игрушки, вязаные корзинки">
+    <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
+  </head>
+  <body>
+    <!-- Блок шапки сайта -->
+    <header class="main-header">
+      <!-- Логотип сайта -->
+      <a class="main-header__logo" href="">
+        <img class="main-header__logo-image" src="img/mishka-logo-mobile.png" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
+      </a>
+      <!-- Блок с меню -->
+      <nav class="main-navigation">
+        <!-- Кнопка открывающая меню -->
+        <button class="main-navigation__button" type="button">Открыть меню</button>
+        <!-- Центровщик для элементов меню -->
+        <div class="main-navigation__wrapper">
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Поиск по сайту</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Корзина: <span>пока пуста</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Основной контент страницы -->
+    <main class="main-content">
+      <!-- Блок с формой заказа -->
+      <h1 class="visually-hidden">Страница для заказа товаров в магазине</h1>
+      <section class="tab-info">
+        <h2 class="tab-info__title">Вязание на заказ</h2>
+      </section>
+      <section class="order-page">
+        <h2 class="visually-hidden">Форма заказа</h2>
+        <p class="order-page__paragraph">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form action="https://echo.htmlacademy.ru" method="post" class="order-form">
+          <!-- Секция с радио-кнопками -->
+          <fieldset class="order-form__radio-button">
+            <legend class="order-form__legend">Тип</legend>
+            <ul class="order-form__list">
+              <li class="order-form__item">
+                <input class="radio__control visually-hidden" type="radio" name="toggle" value="accessory" id="accessory-choice" checked>
+                <label class="order-form__radio-on" for="accessory-choice">Аксессуар для интерьера</label>
+              </li>
+              <li class="order-form__item">
+                <input class="radio__control visually-hidden" type="radio" name="toggle" value="accessory" id="toy-choice">
+                <label class="order-form__radio-off" for="toy-choice">Детская игрушка</label>
+              </li>
+            </ul>
+          </fieldset>
+          <!-- Секция с чекбоксами -->
+          <fieldset class="order-form__checkbox-button">
+            <legend class="order-form__legend">Цвет</legend>
+            <ul class="order-form__list">
+              <li class="order-form__item">
+                <input class="checkbox__control visually-hidden" type="checkbox" name="white" value="color" id="color-white" checked>
+                <label class="order-form__checkbox-on" for="color-white">Белый</label>
+              </li>
+              <li class="order-form__item">
+                <input class="checkbox__control visually-hidden" type="checkbox" name="gray" value="color" id="color-gray">
+                <label class="order-form__checkbox-on" for="color-gray">Серый</label>
+              </li>
+              <li class="order-form__item">
+                <input class="checkbox__control visually-hidden" type="checkbox" name="tiffany" value="color" id="color-tiffany">
+                <label class="order-form__checkbox-off" for="color-tiffany">«Тиффани»</label>
+              </li>
+              <li class="order-form__item">
+                <input class="checkbox__control visually-hidden" type="checkbox" name="black" value="color" id="color-black">
+                <label class="order-form__checkbox-off" for="color-black">Черный</label>
+              </li>
+              <li class="order-form__item">
+                <input class="checkbox__control visually-hidden" type="checkbox" name="pink" value="color" id="color-pink">
+                <label class="order-form__checkbox-off" for="color-pink">Розовый</label>
+              </li>
+              <li class="order-form__item">
+                <input class="checkbox__control visually-hidden" type="checkbox" name="orange" value="color" id="color-orange">
+                <label class="order-form__checkbox-off" for="color-orange">Оранжевый</label>
+              </li>
+            </ul>
+          </fieldset>
+
+        </form>
+      </section>
+    </main>
+    <!-- Подвал сайта с блокм социальных сетей и копирайтом -->
+    <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+            </li>
+         </ul>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 26.943 34.09">
+              <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z" fill="#63d1bb"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
