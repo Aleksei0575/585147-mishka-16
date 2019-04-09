@@ -1,0 +1,137 @@
+.about-us {
+  width: 320px;
+
+  &__title {
+    margin: 0;
+    margin-left: 30px;
+    margin-bottom: 83px;
+
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+
+    :first-child {
+      width: 169px;
+      margin-bottom: 83px;
+    }
+
+    :nth-child(2) {
+      width: 194px;
+      margin-bottom: 83px;
+    }
+
+    :nth-child(3) {
+      width: 174px;
+      margin-bottom: 83px;
+    }
+
+    :nth-child(4) {
+      width: 211px;
+      margin-bottom: 83px;
+    }
+
+    :nth-child(5) {
+      width: 251px;
+      margin-bottom: 83px;
+    }
+
+    :last-child {
+      width: 198px;
+    }
+  }
+}
+
+.description-list {
+  list-style: none;
+
+  &__item {
+    position: relative;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+
+    &--flower::before {
+      position: absolute;
+      content: "";
+      top: -55px;
+      left: 10px;
+      width: 32px;
+      height: 37px;
+
+      background-image: url("../../../img/icon-feature-flower.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--money::before {
+      position: absolute;
+      content: "";
+      top: -55px;
+      left: 0px;
+      width: 47px;
+      height: 27px;
+
+      background-image: url("../../../img/icon-feature-money.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--heart::before {
+      position: absolute;
+      content: "";
+      top: -55px;
+      left: 9px;
+      width: 34px;
+      height: 27px;
+
+      background-image: url("../../../img/icon-feature-heart.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--ball::before {
+      position: absolute;
+      content: "";
+      top: -55px;
+      left: 9px;
+      width: 35px;
+      height: 34px;
+
+      background-image: url("../../../img/icon-feature-ball.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--rocket::before {
+      position: absolute;
+      content: "";
+      top: -55px;
+      left: 0px;
+      width: 55px;
+      height: 23px;
+
+      background-image: url("../../../img/icon-feature-rocket.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--box::before {
+      position: absolute;
+      content: "";
+      top: -55px;
+      left: 9px;
+      width: 33px;
+      height: 32px;
+
+      background-image: url("../../../img/icon-feature-gift.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
