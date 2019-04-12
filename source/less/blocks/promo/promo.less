@@ -1,55 +1,55 @@
 .promo {
-  margin: 0;
-  padding: 0;
   width: 320px;
+}
 
-  &__list {
-    position: relative;
-  }
+.promo__list {
+  position: relative;
+}
 
-  &__link {
-    text-decoration: none;
-    color: #ffffff;
-  }
+.promo__link {
+  color: #ffffff;
+}
 
-  &__item {
-    display: block;
+.promo__item {
+  display: block;
 
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 29px;
-    width: 106px;
-    font-size: 19px;
-    line-height: 24px;
-    font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 29px;
+  width: 106px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
 
-
-    &--interior::after {
-      position: absolute;
-      content: "";
+  &--interior {
+    &::after {
+      .pseudo-elem();
       top: 15px;
       right: 35px;
       width: 40px;
       height: 62px;
 
-      background-image: url("../../../img/icon-interior.svg");
+      background-image: url("../img/icon-interior.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
       opacity: 0.5;
     }
+  }
 
-    &--toy::after {
-      position: absolute;
-      content: "";
+    &--toy {
+      &::after {
+      .pseudo-elem();
       top: 15px;
       right: 25px;
       width: 60px;
       height: 60px;
 
-      background-image: url("../../../img/icon-toy.svg");
+      background-image: url("../img/icon-toy.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
       opacity: 0.5;
     }
   }
 }
+
