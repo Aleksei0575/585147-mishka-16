@@ -1,83 +1,77 @@
 .main-footer {
-  width: 320px;
   background-color: #f1f1f1;
-
-  &__wrapper {
-    padding: 0 30px;
-    margin: 0 auto;
-    /*width: 320px;*/
-  }
 }
 
-.social {
-  margin: 0;
-  padding: 0;
-  /*width: 320px;*/
+.main-footer__wrapper {
+  .wrapper();
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-  }
+.main-footer__list {
+  .ul-reset();
+  display: flex;
+  list-style: none;
+}
 
-  &__link {
-    position: relative;
-    display: inline-block;
-    margin-top: 30px;
-    margin-bottom: 45px;
-    font-size: 0;
+.main-footer__link {
+  position: relative;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  font-size: 0;
 
-    &--instagram::before {
+  &--instagram {
+    &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 55px;
       width: 22px;
       height: 21px;
-      /*opacity: 0.8;*/
-      background-image: url("../../../img/icon-insta.svg");
+      background-image: url("../img/icon-insta.svg");
       background-repeat: no-repeat;
     }
+  }
 
-    &--facebook::before {
+  &--facebook {
+    &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 117px;
       width: 15px;
       height: 28px;
-      /*opacity: 0.8;*/
-      background-image: url("../../../img/icon-fb.svg");
+      background-image: url("../img/icon-fb.svg");
       background-repeat: no-repeat;
     }
+  }
 
-    &--twitter::before {
+
+  &--twitter {
+    &::before {
       content: "";
       position: absolute;
       top: 0;
       left: 170px;
       width: 23px;
       height: 20px;
-      /*opacity: 0.8;*/
-      background-image: url("../../../img/icon-twitter.svg");
+      background-image: url("../img/icon-twitter.svg");
       background-repeat: no-repeat;
     }
   }
 }
 
-.copyright {
-  margin: 0;
+.main-footer__copyright {
   padding-bottom: 30px;
+}
 
-  &__text {
-    display: inline-block;
-    margin-left: 39px;
-    padding-top: 10px;
-    padding-right: 25px;
-    font-size: 19px;
-    line-height: 18px;
-    font-weight: bold;
-    vertical-align: top;
-  }
+.main-footer__developed-by {
+  display: inline-block;
+  margin-left: 39px;
+  padding-top: 10px;
+  padding-right: 25px;
+  font-size: 19px;
+  line-height: 18px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  color: #000000;
+  vertical-align: top;
 }
