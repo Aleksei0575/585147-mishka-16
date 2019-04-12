@@ -1,85 +1,65 @@
-.products {
-  width: 320px;
-
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &__wrapper {
-    padding: 0 30px;
-    margin: 0 auto;
-    /*width: 320px;*/
-  }
+.products__wrapper {
+  .wrapper();
 }
 
-.catalog-list {
-  margin: 0;
-
-  &__item {
-    border: 1px solid #ececec;
-  }
+.products__list {
+  .ul-reset();
 }
 
-.product-card {
-  padding: 0;
-  margin: 0;
-  /*margin-bottom: 30px;*/
+.products__item {
+  border: 1px solid @line-color-catalog;
+}
 
-  &:last-child {
-    margin-bottom: 30px;
-  }
+.products__item {
+  margin-bottom: 30px;
+}
 
-  &__link {
-    /*color: #000000;*/
-    text-decoration: none;
-  }
+.products__image {
+  margin-bottom: 30px;
+}
 
-  &__parameter {
+.products__title {
+  .block-title-text();
+  padding-left: 28px;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.products__title--hare {
+  width: 197px;
+}
+
+.products__title--bowl {
+  width: 180px;
+}
+
+.products__title--toys {
+  width: 170px;
+}
+
+.products__parameter {
     width: 204px;
     margin: 0;
     margin-left: 28px;
     margin-bottom: 15px;
     padding-bottom: 10px;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 30px;
-    font-weight: normal;
+    font-weight: 400;
     color: #444444;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid @line-color-catalog;
   }
 
-  &__price {
-    display: inline-block;
-    margin-left: 28px;
-    margin-right: 100px;
-    padding-bottom: 25px;
+.products__price {
+  display: inline-block;
+  margin-left: 28px;
+  margin-right: 100px;
+  padding-bottom: 25px;
   }
 
-  &__cart {
-    margin: 0;
-
-    path {
-      fill: #231f20;
-      opacity: 0.2;
-    }
-  }
-}
-
-.info-item {
-  margin: 0;
-
-  &__image {
-    margin-bottom: 25px;
-  }
-
-  &__title {
-    margin: 0;
-    margin-left: 28px;
-    margin-bottom: 10px;
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: bold;
-    color: #000000;
-  }
+.products__cart path{
+  fill: #231f20;
+  opacity: 0.2;
 }
