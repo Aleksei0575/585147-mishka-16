@@ -56,15 +56,15 @@
 .top-product__buy {
   position: relative;
 
-  &::before {
+  &::after {
     .pseudo-elem();
     top: 130px;
-    right: -29px;
+    right: -25px;
     width: 320px;
-    height: 25px;
+    height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
-    background-position: 15px 0;
+    background-size: auto 6px;
+    transform: rotate(180deg);
   }
 }
 
