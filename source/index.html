@@ -4,24 +4,21 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"> -->
     <meta name="keywords" content="милые штучки, милые игрушки, ручная работа, игрушки ручной работы, милые вещи для дома ручной работы, предметы интерьера, детские игрушки, вязаные корзинки">
     <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
   </head>
   <body class="global-style">
     <!-- Блок шапки сайта -->
     <header class="main-header container">
-      <!-- Логотип сайта -->
-      <a class="main-header__logo" href="">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
-      </a>
       <!-- Блок с меню -->
       <nav class="main-navigation">
+        <!-- Логотип сайта -->
+        <a class="main-navigation__logo" href="">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
+        </a>
 
-        <!-- Центровщик для элементов меню -->
-        <div class="main-navigation__wrapper">
           <!-- Кнопка открывающая меню -->
-          <button class="main-navigation__button" type="button">Открыть меню</button>
+          <button class="main-navigation__button main-navigation__button--open main-navigation__button--close" type="button">Открыть меню</button>
           <ul class="main-navigation__list site-list">
             <li class="site-list__item">
               <a href="catalog.html">Каталог товаров</a>
@@ -36,7 +33,7 @@
               <a href="#">Корзина: <span>пока пуста</span></a>
             </li>
           </ul>
-        </div>
+
       </nav>
     </header>
     <!-- Основной контент страницы -->

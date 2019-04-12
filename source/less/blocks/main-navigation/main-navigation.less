@@ -1,16 +1,35 @@
 .main-navigation {
-  margin: 0;
-  padding: 0;
-  width: 322px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  position: relative;
+}
 
-  &__list {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: bold;
-    display: none;
-    list-style: none;
+.main-navigation__logo {
+  width: 85px;
+  height: 35px;
+  display: block;
+  margin: 0 auto;
+}
+
+.main-navigation__button {
+  position: absolute;
+  top: 31px;
+  right: 31px;
+  display: block;
+  width: 20px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  font-size: 0;
+  cursor: pointer;
+
+  &--open {
+    background: url("../img/icon-menu-open.svg") no-repeat;
   }
+}
+
+.main-navigation__list {
+  .ul-reset();
+  position: absolute;
+  display: none;
 }
