@@ -3,61 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <meta name="keywords" content="милые штучки, милые игрушки, ручная работа, игрушки ручной работы, милые вещи для дома ручной работы, предметы интерьера, детские игрушки, вязаные корзинки">
     <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
   </head>
-  <body>
+  <body class="global-style">
     <!-- Блок шапки сайта -->
-    <header class="main-header">
-      <!-- Логотип сайта -->
-      <a class="main-header__logo" href="">
-        <img class="main-header__logo-image" src="http://placehold.it/86x35" alt="Логотип сайта &laquo;Мишка&raquo;">
-      </a>
+    <header class="main-header container">
       <!-- Блок с меню -->
       <nav class="main-navigation">
-        <!-- Кнопка открывающая меню -->
-        <button class="main-navigation__button" type="button">Открыть меню</button>
-        <!-- Центровщик для элементов меню -->
-        <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list site-list">
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Корзина: <span>пока пуста</span></a>
-            </li>
-          </ul>
-        </div>
+        <!-- Логотип сайта -->
+        <a class="main-navigation__logo" href="">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
+        </a>
+
+          <!-- Кнопка открывающая меню -->
+        <button class="main-navigation__button main-navigation__button--open main-navigation__button--close" type="button">Открыть меню</button>
+        <ul class="main-navigation__list site-list">
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Корзина: <span>пока пуста</span></a>
+          </li>
+        </ul>
       </nav>
     </header>
     <!-- Основной контент страницы -->
     <main class="main-content container"><!-- Здесь же и центровщик-->
-      <h1 class="main-content__title">Милые штуки ручной работы для дома</h1>
+      <!-- Заголовок сайта и фоновая картинка -->
+      <div class="slogan">
+        <h1 class="slogan__title">Милые штуки<br> ручной<br> работы для дома</h1>
+      </div>
       <!-- Промо блок -->
       <section class="promo">
         <h2 class="visually-hidden">Предложения интернет-магазина &laquo;Мишка&raquo;</h2>
-        <div class="promo__list">
+        <div class="promo__list interior-block">
           <a class="promo__link" href="#">
-            <span class="promo__item">Предметы интерьера</span>
+            <span class="promo__item promo__item--interior">Предметы интерьера</span>
           </a>
         </div>
-        <div class="promo__list">
+        <div class="promo__list toy-block">
           <a class="promo__link" href="#">
-            <span class="promo__item">Детские игрушки</span>
+            <span class="promo__item promo__item--toy">Детские игрушки</span>
           </a>
         </div>
       </section>
       <!-- Блок с лучшим товаром -->
       <section class="top-product">
         <h2 class="top-product__title">Вязаные корзинки</h2>
-        <b class="top-product__best">ТОВАР НЕДЕЛИ</b>
+        <b class="top-product__best">Товар недели</b>
         <p class="top-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="top-product__list">
           <tr>
@@ -86,7 +87,7 @@
           </tr>
         </table>
         <a class="top-product__link" href="">
-          <img class="top-product__image" src="http://placehold.it/260x315" alt="Вязаные корзинки">
+          <img class="top-product__image" src="img/top-product-image.jpg" width="260" height="315" alt="Вязаные корзинки">
         </a>
         <div class="top-product__buy">
           <p class="top-product__cost">Цена: 990 руб.</p>
@@ -96,18 +97,18 @@
       <!-- Блок о нас -->
       <section class="about-us">
         <h2 class="about-us__title">Коротко о нас:</h2>
-        <ul class="about-us__list description-list">
-          <li class="description-list__item description-list__item--flower">Экологически чистые материалы</li>
-          <li class="description-list__item description-list__item--money">Скандинавский стиль по российской цене</li>
-          <li class="description-list__item description-list__item--heart">Увеличивает лайки на фотографиях</li>
-          <li class="description-list__item description-list__item--ball">Связано вручную с любовью и умилением</li>
-          <li class="description-list__item description-list__item--rocket">Поддержка отечественного производителя</li>
-          <li class="description-list__item description-list__item--box">Поставляется в подарочной упаковке</li>
+        <ul class="about-us__list">
+          <li class="about-us__item about-us__item--flower">Экологически чистые материалы</li>
+          <li class="about-us__item about-us__item--money">Скандинавский стиль по российской цене</li>
+          <li class="about-us__item about-us__item--heart">Увеличивает лайки на фотографиях</li>
+          <li class="about-us__item about-us__item--ball">Связано вручную с любовью и умилением</li>
+          <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
+          <li class="about-us__item about-us__item--box">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
       <!-- Блок с отзывами -->
       <section class="reviews">
-        <h2 class="visually-hidden">Отзывы о нас:</h2>
+        <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list slider">
           <blockquote class="reviews__item slider__item">
             <p class="reviews__text">
@@ -124,9 +125,9 @@
             <span class="reviews__author-contact">@vasia</span>
           </blockquote>
         </div>
-        <p class="reviews__toggle slider-toggles">
-          <button class="slider-toggles__button reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="slider-toggles__button reviews__next" type="button">Следующий отзыв</button>
+        <p class="reviews__toggles">
+          <button class="reviews__toggle reviews__toggle--prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__toggle reviews__toggle--next" type="button">Следующий отзыв</button>
         </p>
         <p class="reviews__feedback">
           <a class="reviews__link button" href="form.html">Написать</a>
@@ -141,37 +142,41 @@
         </div>
         <div class="contacts__address">
           <span class="contacts__name">адрес:</span>
-          <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
+          <p class="contacts__text">г. Санкт-Петербург,<br> ул. Большая<br> Конюшенная,<br> д. 19/8, офис 101</p>
         </div>
       </section>
       <!-- Блок с картой и магазином на ней -->
       <section class="map">
         <h2 class="visually-hidden">Карта с расположением интернет магазина</h2>
-        <img class="map__image" src="http://placehold.it/322x457" alt="Магазин на карте">
-        <p class="write-us">
-          <a class="write-us__link button" href="form.html">Напишите нам</a>
+        <img class="map__image" src="img/map-mobile.png" width="322" height="457" alt="Магазин на карте">
+        <p class="map__write-us">
+          <a class="map__link button" href="form.html">Напишите нам</a>
         </p>
       </section>
     </main>
     <!-- Подвал сайта с блокм социальных сетей и копирайтом -->
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <div class="main-footer__wrapper">
         <div class="main-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          <ul class="main-footer__list">
+            <li class="main-footer__item">
+              <a class="main-footer__link main-footer__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <li class="main-footer__item">
+              <a class="main-footer__link main-footer__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+            <li class="main-footer__item">
+              <a class="main-footer__link main-footer__link--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
             </li>
           </ul>
         </div>
         <div class="main-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+          <b class="main-footer__developed-by">Разработано</b>
+          <a class="main-footer__developed-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" fill="#63d1bb"/>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
