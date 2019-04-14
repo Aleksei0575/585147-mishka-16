@@ -71,7 +71,7 @@
                   <label class="order-form__label order-form__label--checkbox" for="color-white">Белый</label>
                 </li>
                 <li class="order-form__item">
-                  <input class="order-form__input order-form__input--checkbox visually-hidden" type="checkbox" name="gray" value="color" id="color-gray">
+                  <input class="order-form__input order-form__input--checkbox visually-hidden" type="checkbox" name="gray" value="color" id="color-gray" checked>
                   <label class="order-form__label order-form__label--checkbox" for="color-gray">Серый</label>
                 </li>
                 <li class="order-form__item">
@@ -95,50 +95,44 @@
           <!-- Секция с полями ввода информации -->
             <fieldset class="order-form__name-user">
               <legend class="order-form__legend">ФИО</legend>
-              <ul class="order-form__list form-group">
-                <li class="form-group__input name">
-                  <label class="name__label name__label--tag" for="input-name">Имя:</label>
-                  <input class="name__input name__input--text" type="text" name="name" id="input-name" placeholder="Введите ваше имя*">
+              <ul class="order-form__list-user">
+                <li class="order-form__item">
+                  <label class="order-form__label order-form__label--name" for="input-name">Имя:</label>
+                  <input class="order-form__input order-form__input--text" type="text" name="name" id="input-name" placeholder="Введите ваше имя*">
                 </li>
-                <li class="form-group__input user-name">
-                  <label class="user-name__label user-name__label--tag" for="input-user-name">Фамилия:</label>
-                  <input class="user-name__input user-name__input--text" type="text" name="user-name" id="input-user-name" placeholder="Укажите фамилию*">
+                <li class="order-form__item">
+                  <label class="order-form__label order-form__label--name" for="input-user-name">Фамилия:</label>
+                  <input class="order-form__input order-form__input--text" type="text" name="user-name" id="input-user-name" placeholder="Укажите фамилию*">
                 </li>
-                <li class="form-group__input second-name">
-                  <label class="second-name__label second-name__label--tag" for="input-second-name">Отчество:</label>
-                  <input class="second-name__input second-name__input--text" type="text" name="second-name" id="input-second-name" placeholder="Отчество, если желаете">
+                <li class="order-form__item">
+                  <label class="order-form__label sorder-form__label--name" for="input-second-name">Отчество:</label>
+                  <input class="order-form__input order-form__input--text" type="text" name="second-name" id="input-second-name" placeholder="Отчество, если желаете">
                 </li>
               </ul>
             </fieldset>
           <!-- Секция с полем ввода телефона -->
             <fieldset class="order-form__phone">
               <legend class="order-form__legend">тел</legend>
-              <ul class="order-form__list form-group">
-                <li class="form-group__input phone-number">
-                  <label class="phone-number__label phone-number__label--tag" for="input-phone"></label>
-                  <input class="phone-number__input phone-number__input--icon" type="tel" name="phone" id="input-phone" pattern="\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-                </li>
-              </ul>
+              <div class="order-form__item-phone">
+                <label class="order-form__label order-form__label--phone" for="input-phone"></label>
+                <input class="order-form__input order-form__input-phonetext order-form__input--tel" type="tel" name="phone" id="input-phone" pattern="\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              </div>
             </fieldset>
           <!-- Секция с полем ввода эл. почты -->
             <fieldset class="order-form__email">
               <legend class="order-form__legend">E-mail</legend>
-              <ul class="order-form__list form-group">
-                <li class="form-group__input email">
-                  <label class="email__label email__label--tag" for="input-email"></label>
-                  <input class="email__input email__input--icon" type="email" name="email" id="input-email" placeholder="Ваш Email*">
-                </li>
-              </ul>
+              <div class="order-form__item-email">
+                <label class="order-form__label order-form__label--email" for="input-email"></label>
+                <input class="order-form__input order-form__input-text order-form__input--email" type="email" name="email" id="input-email" placeholder="Ваш Email*">
+              </div>
             </fieldset>
           <!-- Секция с полем textarea -->
             <fieldset class="order-form__textarea">
               <legend class="order-form__legend">Доп</legend>
-              <ul class="order-form__list form-group">
-                <li class="form-group__input textarea">
-                  <label class="textarea__label textarea__label--tag" for="text-letter"></label>
-                  <textarea id="text-letter" name="letter" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-                </li>
-              </ul>
+              <div class="order-form__item-area">
+                <label class="order-form__label order-form__label--textarea" for="text-letter"></label>
+                <textarea class="order-form__input-textarea" id="text-letter" name="letter" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </div>
             </fieldset>
             <div class="order-form__sending">
               <p class="order-form__note">*Поля обязательны для заполнения</p>
