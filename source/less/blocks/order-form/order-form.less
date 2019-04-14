@@ -72,6 +72,41 @@
       background-color: #62d1ba;
     }
   }
+
+  &--checkbox + .order-form__label--checkbox {
+    &::after {
+      .pseudo-elem();
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 35px;
+      border: 2px solid @border-color;
+    }
+  }
+
+  &--checkbox:checked + .order-form__label--checkbox {
+    &::before {
+      .pseudo-elem();
+      top: 5px;
+      left: 10px;
+      width: 33px;
+      height: 22px;
+      background: url("../img/icon-tick.svg") no-repeat;
+      background-size: 22px 22px;
+    }
+  }
+
+  &--text {
+    width: 100%;
+    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border: 0;
+    border-bottom: 2px solid @title-text-color;
+    font-size: 17px;
+    line-height: 18px;
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .order-form__list-checkbox {
@@ -120,39 +155,12 @@
     position: relative;
   }
 
-    li:last-child {
+  li:last-child {
     width: 107px;
     padding-left: 62px;
     padding-top: 10px;
     padding-bottom: 33px;
     position: relative;
-  }
-}
-
-.order-form__input {
-  margin: 0;
-
-  &--checkbox + .order-form__label--checkbox {
-    &::after {
-      .pseudo-elem();
-      top: 0;
-      left: 0;
-      width: 36px;
-      height: 35px;
-      border: 2px solid @border-color;
-    }
-  }
-
-  &--checkbox:checked + .order-form__label--checkbox {
-    &::before {
-      .pseudo-elem();
-      top: 5px;
-      left: 10px;
-      width: 33px;
-      height: 22px;
-      background: url("../img/icon-tick.svg") no-repeat;
-      background-size: 22px 22px;
-    }
   }
 }
 
@@ -175,26 +183,10 @@
   }
 }
 
-.order-form__input {
-  margin: 0;
-
-  &--text {
-    width: 100%;
-    padding: 0;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    border: 0;
-    border-bottom: 2px solid @title-text-color;
-    font-size: 17px;
-    line-height: 18px;
-    color: rgba(68, 68, 68, 0.3);
-  }
-}
-
 .order-form__item-phone {
   position: relative;
 
-    &::before {
+  &::before {
     .pseudo-elem();
     top: 9px;
     right: 5px;
@@ -221,7 +213,7 @@
 .order-form__item-email {
   position: relative;
 
-    &::before {
+  &::before {
     .pseudo-elem();
     top: 2px;
     right: 5px;
