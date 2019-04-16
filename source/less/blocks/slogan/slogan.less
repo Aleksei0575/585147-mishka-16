@@ -1,4 +1,6 @@
 .slogan {
+  display: flex;
+  justify-content: center;
   width: 320px;
   height: 373px;
   background-color: #ebeded;
@@ -12,6 +14,43 @@
 
 .slogan__title {
   .block-title-text();
+  width: 250px;
   margin-top: 87px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .slogan {
+    width: 668px;
+    height: 746px;
+    margin-top: -69px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+  }
+
+  .slogan__title {
+    .block-title-text();
+    width: 497px;
+    margin-top: 155px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slogan {
+    width: 1050px;
+    height: 746px;
+    margin-top: -69px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  .slogan__title {
+    .block-title-text();
+    width: 615px;
+    margin-top: 161px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
