@@ -6,6 +6,7 @@
 .about-us__title {
   .block-title-text();
   padding-bottom: 80px;
+  margin-top: 60px;
 }
 
 .about-us__list {
@@ -120,8 +121,8 @@
 @media (min-width: @tablet-width) {
   .about-us {
     width: 668px;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -133,6 +134,7 @@
     line-height: 50px;
     flex-grow: 1;
     padding: 0;
+    margin-top: 40px;
     margin-bottom: 100px;
   }
 
@@ -199,17 +201,21 @@
 
 @media (min-width: @desktop-width) {
   .about-us {
-    width: 700px;
-    margin: 0 auto;
+    width: 1050px;
   }
 
   .about-us__title {
     width: 400px;
     font-size: 53px;
     line-height: 57px;
+    padding-left: 125px;
+    margin-top: 85px;
   }
 
   .about-us__list {
+    width: 700px;
+    padding-left: 125px;
+
     li:first-child {
       margin-right: 145px;
     }

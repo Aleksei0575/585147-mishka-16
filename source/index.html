@@ -58,9 +58,9 @@
       </nav>
     </header>
     <!-- Основной контент страницы -->
-    <main class="main-content container"><!-- Здесь же и центровщик-->
+    <main class="main-content">
       <!-- Заголовок сайта и фоновая картинка -->
-      <div class="slogan">
+      <div class="slogan container">
         <h1 class="slogan__title">Милые штуки ручной<br> работы для дома</h1>
       </div>
       <!-- Промо блок -->
@@ -109,11 +109,11 @@
           </tr>
         </table>
         <a class="top-product__link" href="catalog.html">
-          <picture>
+          <!-- <picture>
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg"> -->
             <img class="top-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-tablet@1x.jpg" width="260" height="315" alt="изображение Вязаные корзинки">
-          </picture>
+          <!-- </picture> -->
         </a>
         <div class="top-product__buy">
           <p class="top-product__cost">Цена: 990 руб.</p>
@@ -151,17 +151,18 @@
             <cite class="reviews__author-name">Вася Иванов</cite>
             <span class="reviews__author-contact">@vasia</span>
           </blockquote> -->
+          <p class="reviews__toggles">
+            <button class="reviews__toggle reviews__toggle--prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__toggle reviews__toggle--next" type="button">Следующий отзыв</button>
+          </p>
         </div>
-        <p class="reviews__toggles">
-          <button class="reviews__toggle reviews__toggle--prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__toggle reviews__toggle--next" type="button">Следующий отзыв</button>
-        </p>
+
         <p class="reviews__feedback">
           <a class="reviews__link button" href="form.html">Написать</a>
         </p>
       </section>
       <!-- Блок с контактами -->
-      <section class="contacts">
+      <section class="contacts container">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__mail">
           <span class="contacts__name">e-mail:</span>
