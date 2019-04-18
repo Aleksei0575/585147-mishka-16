@@ -23,3 +23,140 @@
   margin: 0;
   width: 178px;
 }
+
+.contacts__map {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 39px;
+}
+
+.contacts__map-image {
+  width: 100%;
+  margin-bottom: 39px;
+}
+
+.contacts__write-us {
+  margin: 0;
+  text-align: center;
+}
+
+.contacts__write-us-link {
+  padding-left: 52px;
+  padding-right: 52px;
+  min-width: 155px;
+  text-decoration: none;
+  margin-bottom: 39px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    width: 668px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .contacts__title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    font-size: 43px;
+    line-height: 50px;
+    background-image: url("../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
+    height: 81px;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .contacts__mail {
+    display: flex;
+    align-self: flex-start;
+    width: 300px;
+  }
+
+  .contacts__address {
+    display: flex;
+    width: 305px;
+  }
+
+  .contacts__text {
+    width: 222px;
+  }
+
+  .contacts__map-image {
+    width: 100%;
+    margin-bottom: 55px;
+  }
+
+  .contacts__write-us {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .contacts__write-us-link {
+    margin-bottom: 39px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .contacts__title {
+    width: 461px;
+    margin-top: 190px;
+    font-size: 53px;
+    line-height: 57px;
+    background-position: left top;
+    padding-left: 125px;
+  }
+
+  .contacts__wrapper {
+    width: 461px;
+    flex-direction: column;
+    padding-left: 125px;
+  }
+
+  .contacts__mail {
+    padding-bottom: 46px;
+  }
+
+  .contacts__map {
+    align-self: flex-end;
+    width: 525px;
+    margin-top: -340px;
+    margin-bottom: 0;
+  }
+
+  .contacts__map-image {
+    height: 457px;
+  }
+
+  .contacts__write-us {
+    width: 265px;
+    margin-top: -145px;
+    margin-bottom: 39px;
+    margin-left: 125px;
+  }
+
+  /*.contacts__write-us-link {
+    padding-left: 41px;
+    padding-right: 41px;
+  }*/
+}
