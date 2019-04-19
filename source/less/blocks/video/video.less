@@ -3,11 +3,31 @@
 }
 
 .video__border {
-  border: 1px solid line-color-catalog;
+  border: 1px solid @line-color-catalog;
 }
 
 .video__wrapper {
   .wrapper();
+}
+
+.video__list {
+  .ul-reset();
+}
+
+.video__substrate {
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+    .pseudo-elem();
+    top: 135px;
+    left: 80px;
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .video__title {
@@ -27,26 +47,6 @@
     width: 32px;
     height: 32px;
     background-image: url("../img/icon-video.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-}
-
-.video__list {
-  .ul-reset();
-}
-
-.video__substrate {
-  position: relative;
-  margin-bottom: 20px;
-
-  &::before {
-    .pseudo-elem();
-    top: 40px;
-    left: 80px;
-    width: 101px;
-    height: 77px;
-    background-image: url("../img/icon-play.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -80,4 +80,100 @@
   margin-bottom: 33px;
   padding-left: 26px;
   padding-right: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .video {
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .video__wrapper {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 63px;
+  }
+
+  .video__substrate {
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      top: 150px;
+      left: 280px;
+    }
+  }
+
+  .video__title {
+    width: 100%;
+    order: 1;
+    font-size: 20px;
+
+    &::before {
+      top: 20px;
+    }
+  }
+
+  .video__image {
+    width: 100%;
+    order: 0;
+  }
+
+  .video__text {
+    width: 581px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .video__link {
+    margin-bottom: 33px;
+    padding-left: 222px;
+    padding-right: 222px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .video__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video__title {
+    width: 148px;
+    align-self: flex-end;
+    margin-top: -381px;
+    margin-right: 135px;
+
+    &::before {
+      top: -40px;
+      left: 100px;
+    }
+  }
+
+  .video__image {
+    width: 682px;
+    height: 455px;
+  }
+
+  .video__text {
+    width: 222px;
+    align-self: flex-end;
+    margin-right: 60px;
+  }
+
+  .video__order {
+    align-self: flex-end;
+    margin-right: 50px;
+  }
+
+  .video__link {
+    margin-bottom: 33px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
 }
