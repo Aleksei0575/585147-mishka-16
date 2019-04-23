@@ -3,8 +3,8 @@
 }
 
 .promo__list {
-  .wrapper();
-  width: 320px;
+  /*.wrapper();
+  width: 320px;*/
   position: relative;
 }
 
@@ -64,17 +64,22 @@
     margin-top: -118px;
     position: relative;
 
-    &::after {
+    &::before {
       .pseudo-elem();
-      width: 768px;
-      height: 24px;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      transform: translate(-10px, 103px);
+      width: 100%;
+      height: 23px;
+      top: 1px;
+      left: 0;
+      background-image: url(../img/bg-zigzag-fill.svg);
+      transform: translate(0, 103px);
+      background-size: auto 23px;
+      z-index: 2;
     }
   }
 
   .promo__list {
     width: 334px;
+    margin-bottom: 150px;
   }
 
   .promo__item {
@@ -101,15 +106,17 @@
   .promo {
     width: 1050px;
 
-    &::after {
-      width: 1250px;
-      height: 34px;
-      transform: translate(-21px, 102px);
+    &::before {
+      width: 100%;
+      height: 36px;
+      /*transform: translate(-21px, 102px);*/
+      background-size: auto 36px;
     }
   }
 
   .promo__list {
     width: 525px;
+    margin-bottom: 54px;
   }
 
   .promo__item {

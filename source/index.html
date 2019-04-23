@@ -11,7 +11,7 @@
   </head>
   <body class="global-style">
     <!-- Блок шапки сайта -->
-    <header class="main-header container">
+    <header class="main-header">
       <!-- Блок с меню -->
       <nav class="main-navigation">
           <!-- Кнопка открывающая меню -->
@@ -19,7 +19,7 @@
         <ul class="main-navigation__list site-list">
           <li class="main-navigation__item main-navigation__item--logo">
             <!-- Логотип сайта -->
-            <a class="main-navigation__logo-link" href="">
+            <a class="main-navigation__logo-link" href="index.html">
               <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
             </a>
           </li>
@@ -65,6 +65,7 @@
       </div>
       <!-- Промо блок -->
       <section class="promo">
+
         <h2 class="visually-hidden">Предложения интернет-магазина &laquo;Мишка&raquo;</h2>
         <div class="promo__list interior-block">
           <a class="promo__link" href="#">
@@ -79,45 +80,51 @@
       </section>
       <!-- Блок с лучшим товаром -->
       <section class="top-product">
-        <h2 class="top-product__title">Вязаные корзинки</h2>
-        <b class="top-product__best">Товар недели</b>
-        <p class="top-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="top-product__list">
-          <tr>
-            <td class="top-product__field">
-              Цвет:
-            </td>
-            <td class="top-product__value">
-              «Тиффани»/серый
-            </td>
-          </tr>
-          <tr>
-            <td class="top-product__field">
-              Диаметр:
-            </td>
+        <div class="top-product__text">
+          <h2 class="top-product__title">Вязаные корзинки</h2>
+          <b class="top-product__best">Товар недели</b>
+        </div>
+        <div class="top-product__info">
+          <p class="top-product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="top-product__list">
+            <tr>
+              <td class="top-product__field">
+                Цвет:
+              </td>
+              <td class="top-product__value">
+                «Тиффани»/серый
+              </td>
+            </tr>
+            <tr>
+              <td class="top-product__field">
+                Диаметр:
+              </td>
             <td class="top-product__value">
               25 см
             </td>
-          </tr>
-          <tr>
-            <td class="top-product__field">
-              Высота:
-            </td>
-            <td class="top-product__value">
-              15 см
-            </td>
-          </tr>
-        </table>
-        <a class="top-product__link" href="catalog.html">
-          <!-- <picture>
+            </tr>
+            <tr>
+              <td class="top-product__field">
+                Высота:
+              </td>
+              <td class="top-product__value">
+                15 см
+              </td>
+            </tr>
+          </table>
+          <div class="top-product__buy">
+            <p class="top-product__cost">Цена: 990 руб.</p>
+            <a class="top-product__order top-product__order--button button" href="form.html">Заказать</a>
+          </div>
+        </div>
+        <div class="top-product__pictures">
+          <a class="top-product__link" href="catalog.html">
+            <!-- <picture>
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg"> -->
-            <img class="top-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-tablet@1x.jpg" width="260" height="315" alt="изображение Вязаные корзинки">
+              <img class="top-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-tablet@1x.jpg" width="260" height="315" alt="изображение Вязаные корзинки">
           <!-- </picture> -->
-        </a>
-        <div class="top-product__buy">
-          <p class="top-product__cost">Цена: 990 руб.</p>
-          <a class="top-product__order button" href="form.html">Заказать</a>
+          </a>
         </div>
       </section>
       <!-- Блок о нас -->
@@ -176,8 +183,6 @@
         </div>
         <div class="contacts__map">
           <img class="contacts__map-image" src="img/map-mobile.png" width="322" height="457" alt="Магазин на карте">
-
-
         </div>
         <p class="contacts__write-us">
           <a class="contacts__write-us-link button" href="form.html">Напишите нам</a>
@@ -186,8 +191,8 @@
       </section>
     </main>
     <!-- Подвал сайта с блокм социальных сетей и копирайтом -->
-    <footer class="main-footer container">
-      <div class="main-footer__wrapper">
+    <footer class="main-footer">
+      <div class="main-footer__wrapper container">
         <div class="main-footer__logo">
           <a class="main-footer__logo-link" href="index.html">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">

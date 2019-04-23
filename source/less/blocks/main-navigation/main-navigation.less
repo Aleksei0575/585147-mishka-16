@@ -5,12 +5,13 @@
   position: relative;
 }
 
-.main-navigation__logo {
+.main-navigation__logo-link {
   width: 85px;
   height: 35px;
   display: block;
   margin: 0 auto;
   padding-bottom: 22px;
+  padding-top: 23px;
 }
 
 .main-navigation__button {
@@ -37,17 +38,22 @@
 
 .main-navigation__item {
   width: auto;
-  padding-top: 23px;
-  padding-bottom: 22px;
-  padding-left: 76px;
   border-bottom: 1px solid @line-color-catalog;
 
-  &--search {
-    padding-left: 32px;
+  &--logo {
+    text-align: center;
+  }
+
+  &--catalog {
+    padding-left: 50px;
+  }
+
+  &--order {
+    padding-left: 50px;
   }
 
   &--cart {
-    padding-left: 32px;
+    border-bottom: none;
   }
 
   &--new,
@@ -62,10 +68,20 @@
   font-size: 17px;
   line-height: 24px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
+
+  &--catalog,
+  &--order,
+  &--search,
+  &--cart {
+    display: block;
+    padding-bottom: 22px;
+    padding-top: 23px;
+    cursor: pointer;
+  }
 }
 
 .main-navigation__link-icon {
-  padding-right: 23px;
+  padding-right: 26px;
   opacity: 0.2;
 }
 
@@ -96,7 +112,6 @@
 
     &--logo {
       width: 320px;
-      border-bottom: 1px solid @line-color-catalog;
     }
 
     &--catalog {
@@ -115,14 +130,12 @@
       order: 0;
       border-left: 1px solid @line-color-catalog;
       border-right: 1px solid @line-color-catalog;
-      border-bottom: 1px solid @line-color-catalog;
     }
 
     &--cart {
       width: 265px;
       text-align: right;
       order: 1;
-      border-bottom: 1px solid @line-color-catalog;
     }
 
     &--delivery {
@@ -138,13 +151,16 @@
 
   .main-navigation__link {
     border-top: none;
+    display: block;
 
     &--catalog {
       font-size: 15px;
+      padding-top: 24px;
     }
 
     &--order {
       font-size: 15px;
+      padding-top: 24px;
     }
 
     &--search {
@@ -155,19 +171,19 @@
     &--delivery {
       font-family: "Open Sans", "Arial", sans-serif;
       font-size: 15px;
+      padding-top: 25px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-header {
-    width: 1050px;
+    width: 100%;
   }
 
   .main-navigation__item {
     &--catalog {
       order: 0;
-      border-bottom: 1px solid @line-color-catalog;
       border-right: 1px solid @line-color-catalog;
     }
 
@@ -175,7 +191,6 @@
       width: 300px;
       padding-left: 30px;
       order: 0;
-      border-bottom: 1px solid @line-color-catalog;
     }
 
     &--logo {
@@ -191,11 +206,13 @@
     &--new {
       display: block;
       order: 1;
+      padding-top: 24px;
       padding-right: 35px;
     }
 
     &--sale {
       display: block;
+      padding-top: 24px;
       order: 1;
     }
   }

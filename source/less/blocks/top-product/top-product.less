@@ -1,6 +1,23 @@
 .top-product {
   .wrapper();
   margin-bottom: 80px;
+  position: relative;
+
+   &::after {
+    .pseudo-elem();
+    width: 100%;
+    height: 6px;
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-size: auto 6px;
+    transform: rotate(180deg);
+    transform: translate(0px, 150px);
+    bottom: 0px;
+    left: 0px;
+  }
+}
+
+.top-product__text-info {
+  margin-bottom: 36px;
 }
 
 .top-product__title {
@@ -32,6 +49,9 @@
   tr {
     display: block;
     padding-bottom: 10px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 
@@ -46,26 +66,6 @@
   width: 162px;
   text-align: left;
   border-bottom: 1px solid @line-color;
-}
-
-.top-product__link {
-  display: block;
-  margin-bottom: 29px;
-}
-
-.top-product__buy {
-  position: relative;
-
-  &::after {
-    .pseudo-elem();
-    top: 130px;
-    right: -40px;
-    width: 320px;
-    height: 6px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-size: auto 6px;
-    transform: rotate(180deg);
-  }
 }
 
 .top-product__cost {
@@ -85,111 +85,158 @@
   line-height: 20px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   text-align: center;
+
+  &--button {
+    padding-left: 80px;
+  padding-right: 80px;
+  }
+}
+
+.top-product__pictures {
+  position: relative;
+  margin-bottom: 155px;
+
+
+}
+
+.top-product__link {
+  display: block;
+  margin-bottom: 29px;
+}
+
+.top-product__buy {
+  position: absolute;
+  bottom: -121px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .top-product {
     width: 668px;
-    padding: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+
+    &::after {
+      min-width: 100%;
+      height: 15px;
+      transform: translate(0px, 50px);
+      background-size: auto 15px;
+    }
+  }
+
+  .top-product__text {
+    position: absolute;
+    top: -110px;
+    width: 668px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .top-product__title {
     width: 430px;
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 50px;
+    margin: 0;
   }
 
   .top-product__best {
     width: 70px;
+    margin: 0;
     margin-right: 20px;
-    margin-top: 40px;
-    margin-bottom: 8px;
     line-height: 17px;
     text-align: center;
+  }
+
+  .top-product__info {
+    width: 292px;
   }
 
   .top-product__description {
     width: 285px;
     font-size: 17px;
     line-height: 30px;
-    /*margin-bottom: 30px;*/
   }
 
   .top-product__list {
-    margin-top: -222px;
-    order: 1;
+    box-sizing: border-box;
   }
 
   .top-product__buy {
     margin-right: 142px;
-    margin-top: -80px;
-    order: 2;
+    width: 100%;
+    position: inherit;
+  }
 
-    &::after {
-      width: 768px;
-      height: 15px;
-      left: -40px;
-      background-size: auto 15px;
-    }
+  .top-product__pictures {
+    margin-bottom: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .top-product {
     width: 1050px;
+
+    &::after {
+      width: 100%;
+      height: 23px;
+      /*left: -125px;*/
+      background-size: auto 23px;
+    }
+  }
+
+  .top-product__text {
+    top: 20px;
+    left: 45px;
+    z-index: 10;
   }
 
   .top-product__best {
-    align-self: flex-start;
     order: 0;
+    margin: 0;
   }
 
   .top-product__title {
     width: 527px;
     align-self: flex-start;
     flex-grow: 1;
-    margin-left: 28px;
+    margin-left: 35px;
     font-size: 53px;
     line-height: 57px;
     order: 1;
   }
 
-  .top-product__description {
-    margin-top: -204px;
+  .top-product__info {
+    margin-top: 120px;
     margin-left: 125px;
+  }
+
+  .top-product__description {
     order: 3;
-    /*margin: 0;*/
+    margin-bottom: 67px;
   }
 
   .top-product__list {
-    width: 100%;
-    margin-top: -85px;
-    margin-left: 125px;
-    margin-bottom: 30px;
+    margin-bottom: 115px;
     order: 3;
-    /*margin: 0;*/
+  }
+
+  .top-product__pictures {
+    width: 500px;
+  }
+
+  .top-product__image {
+    width: 100%;
   }
 
   .top-product__link {
     order: 2;
-    margin-top: 50px;
     margin-bottom: 0;
   }
 
   .top-product__buy {
-    margin: 0;
-    margin-left: 125px;
     order: 3;
-
-    &::after {
-      width: 1050px;
-      height: 23px;
-      left: -125px;
-      background-size: auto 23px;
-    }
   }
 }

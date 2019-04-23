@@ -79,8 +79,6 @@
   }
 
   .contacts__mail {
-    display: flex;
-    align-self: flex-start;
     width: 300px;
   }
 
@@ -111,11 +109,11 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    display: flex;
-    flex-direction: column;
-    width: 1050px;
+    display: block;
+    position: relative;
+    /*width: 1050px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 50px;*/
   }
 
   .contacts__title {
@@ -129,8 +127,9 @@
 
   .contacts__wrapper {
     width: 461px;
-    flex-direction: column;
+    display: block;
     padding-left: 125px;
+    margin-bottom: 98px;
   }
 
   .contacts__mail {
@@ -138,20 +137,24 @@
   }
 
   .contacts__map {
-    align-self: flex-end;
     width: 525px;
-    margin-top: -340px;
-    margin-bottom: 0;
+    position: absolute;
+    top: -45px;
+    right: 0;
   }
 
   .contacts__map-image {
     height: 457px;
+    margin-bottom: 0;
   }
 
   .contacts__write-us {
     width: 265px;
-    margin-top: -145px;
-    margin-bottom: 39px;
+    margin-bottom: 105px;
     margin-left: 125px;
+  }
+
+  .contacts__write-us-link {
+    margin: 0;
   }
 }

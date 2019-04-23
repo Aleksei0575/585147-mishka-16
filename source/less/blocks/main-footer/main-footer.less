@@ -1,9 +1,6 @@
 .main-footer {
   background-color: #f1f1f1;
-}
-
-.main-footer__wrapper {
-  .wrapper();
+  width: 100%;
 }
 
 .main-footer__logo {
@@ -42,7 +39,7 @@
   &--facebook {
     &::before {
       .pseudo-elem();
-      top: 0;
+      top: -3px;
       left: 117px;
       width: 15px;
       height: 28px;
@@ -50,7 +47,6 @@
       background-repeat: no-repeat;
     }
   }
-
 
   &--twitter {
     &::before {
@@ -88,15 +84,15 @@
 
 @media (min-width: @tablet-width) {
   .main-footer {
-    width: 668px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 50px;
   }
 
   .main-footer__wrapper {
     width: 668px;
+    margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
 
