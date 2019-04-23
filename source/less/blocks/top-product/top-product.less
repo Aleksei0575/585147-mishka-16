@@ -7,12 +7,11 @@
     .pseudo-elem();
     width: 100%;
     height: 6px;
-    background-image: url(../img/bg-zigzag-line.svg);
+    background-image: url("../img/bg-zigzag-line.svg");
     background-size: auto 6px;
-    transform: rotate(180deg);
-    transform: translate(0px, 150px);
-    bottom: 0px;
-    left: 0px;
+    transform: translate(0, 150px) rotate(180deg);
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -49,9 +48,7 @@
   tr {
     display: block;
     padding-bottom: 10px;
-    -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 
@@ -119,7 +116,7 @@
     &::after {
       min-width: 100%;
       height: 15px;
-      transform: translate(0px, 50px);
+      transform: translate(0, 50px);
       background-size: auto 15px;
     }
   }
