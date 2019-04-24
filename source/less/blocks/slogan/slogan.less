@@ -1,17 +1,57 @@
 .slogan {
-  width: 320px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 373px;
+  border-top: 1px solid @line-color-catalog;
   background-color: #ebeded;
 
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
   overflow: hidden;
 }
 
-
 .slogan__title {
   .block-title-text();
+  width: 250px;
   margin-top: 87px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .slogan {
+    width: 100%;
+    height: 746px;
+    margin-top: -69px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+  }
+
+  .slogan__title {
+    .block-title-text();
+    width: 497px;
+    margin-top: 155px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slogan {
+    width: 100%;
+    height: 746px;
+    margin-top: -50px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  .slogan__title {
+    .block-title-text();
+    width: 615px;
+    margin-top: 161px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

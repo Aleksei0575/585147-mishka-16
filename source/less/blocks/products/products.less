@@ -40,23 +40,155 @@
   margin: 0;
   margin-left: 28px;
   margin-bottom: 15px;
-  padding-bottom: 10px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 30px;
   font-weight: 400;
   color: @text-color;
-  border-bottom: 1px solid @line-color-catalog;
+}
+
+.products__cost {
+  width: 100%;
+  border-top: 1px solid @line-color-catalog;
 }
 
 .products__price {
   display: inline-block;
   margin-left: 28px;
   margin-right: 100px;
+  padding-top: 25px;
   padding-bottom: 25px;
 }
 
 .products__cart path {
   fill: #231f20;
   opacity: 0.2;
+}
+
+@media (min-width: @tablet-width) {
+  .products__wrapper {
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .products__list {
+    display: block;
+  }
+
+  .products__item {
+    display: flex;
+  }
+
+  .products__image {
+    width: 334px;
+    height: 334px;
+    margin-bottom: 0;
+  }
+
+  .products__description {
+    padding-bottom: 170px;
+  }
+
+  .products__title {
+    width: 232px;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .products__parameter {
+    width: 210px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .products__cost {
+    margin-left: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products__wrapper {
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .products__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .products__item {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  /*Размеры изменятся когда
+  вставлю кратинки которые нужно*/
+  .products__info-item {
+    width: 316px;
+    height: 462px;
+
+    /*width: 100%;
+    height: auto;*/
+    margin-bottom: 29px;
+  }
+
+  .products__image {
+    width: 316px;
+    height: 462px;
+
+    /*width: 100%;
+    height: auto;*/
+  }
+
+  .products__info {
+    padding: 0 20px;
+  }
+
+  .products__description {
+    padding-bottom: 0;
+  }
+
+  .products__title {
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .products__parameter {
+    width: 256px;
+    margin: 0;
+    padding-left: 0;
+
+    &--hare {
+      padding-bottom: 45px;
+    }
+
+    &--bowl {
+      padding-bottom: 45px;
+    }
+
+    &--toys {
+      padding-bottom: 19px;
+    }
+  }
+
+  .products__cost {
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .products__price {
+    margin: 0;
+  }
+
+  .products__cart {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
