@@ -8,12 +8,38 @@
     <link href="css/style.css" rel="stylesheet">
     <meta name="keywords" content="милые штучки, милые игрушки, ручная работа, игрушки ручной работы, милые вещи для дома ручной работы, предметы интерьера, детские игрушки, вязаные корзинки">
     <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+    /* По умолчанию показывается мобильный макет */
+        background-image: url( "preview/mishka-index-mobile.jpg" );
+      }
+    /* Планшет */
+      @media ( min-width: 768px ) {
+        HTML {
+      /* Планшетный макет */
+          background-image: url( "preview/mishka-index-tablet.jpg" );
+        }
+      }
+    /* Десктоп */
+      @media ( min-width: 1150px ) {
+        HTML {
+      /* Десктопный макет */
+          background-image: url( "preview/mishka-index-desktop.jpg" );
+        }
+      }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
   </head>
   <body class="global-style">
     <!-- Блок шапки сайта -->
     <header class="main-header container">
       <!-- Блок с меню -->
-      <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <!-- Кнопка открывающая меню -->
         <button class="main-navigation__button" type="button">Открыть меню</button>
         <ul class="main-navigation__list site-list">
@@ -169,7 +195,7 @@
         </p>
       </section>
       <!-- Блок с контактами -->
-      <section class="contacts container">
+      <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__wrapper">
           <div class="contacts__mail">
@@ -178,7 +204,7 @@
           </div>
           <div class="contacts__address">
             <span class="contacts__name">адрес:</span>
-            <p class="contacts__text">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
+            <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
           </div>
         </div>
         <div class="contacts__map">
@@ -187,7 +213,6 @@
         <p class="contacts__write-us">
           <a class="contacts__write-us-link button" href="form.html">Напишите нам</a>
         </p>
-
       </section>
     </main>
     <!-- Подвал сайта с блокм социальных сетей и копирайтом -->

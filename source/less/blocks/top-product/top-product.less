@@ -10,7 +10,7 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-size: auto 6px;
     transform: translate(0, 150px) rotate(180deg);
-    bottom: 0;
+    bottom: -11px;
     left: 0;
   }
 }
@@ -21,13 +21,13 @@
 
 .top-product__title {
   .block-title-text();
-  margin-top: 30px;
-  margin-bottom: 8px;
+  margin-top: 15px;
+  margin-bottom: 6px;
 }
 
 .top-product__best {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-size: 17px;
   line-height: 20px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
@@ -38,7 +38,7 @@
 .top-product__description {
   width: 250px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .top-product__list {
@@ -47,27 +47,27 @@
 
   tr {
     display: block;
-    padding-bottom: 10px;
+    margin-bottom: 6px;
+    padding-bottom: 7px;
     box-sizing: border-box;
+    border-bottom: 1px solid @line-color;
   }
 }
 
 .top-product__field {
   width: 67px;
-  padding-right: 31px;
+  padding-right: 27px;
   text-align: left;
-  border-bottom: 1px solid @line-color;
 }
 
 .top-product__value {
   width: 162px;
   text-align: left;
-  border-bottom: 1px solid @line-color;
 }
 
 .top-product__cost {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   width: 260px;
 
   font-size: 17px;
@@ -86,6 +86,8 @@
   &--button {
     padding-left: 80px;
     padding-right: 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
