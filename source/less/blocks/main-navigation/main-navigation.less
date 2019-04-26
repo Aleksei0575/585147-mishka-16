@@ -17,7 +17,43 @@
 .main-navigation__button {
   .pseudo-elem();
   top: 31px;
-  right: 31px;
+  right: 0;
+  z-index: 2;
+
+  display: block;
+  width: 21px;
+  height: 21px;
+
+  background-color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.main-navigation--closed .main-navigation__button::before {
+  .pseudo-elem();
+  top: 3px;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 14px;
+  background: url("../img/icon-menu-open.svg") no-repeat;
+  cursor: pointer;
+}
+
+.main-navigation--opened .main-navigation__button::before {
+  .pseudo-elem();
+  top: 1px;
+  right: 0;
+  width: 21px;
+  height: 20px;
+  background: url("../img/icon-menu-close.svg") no-repeat;
+}
+
+/*.main-navigation__button {
+  .pseudo-elem();
+  top: 31px;
+  right: 0;
   display: block;
   width: 20px;
   height: 14px;
@@ -29,7 +65,14 @@
   &--open {
     background: url("../img/icon-menu-open.svg") no-repeat;
   }
-}
+
+  &--close {
+    top: 28px;
+    width: 21px;
+    height: 20px;
+    background: url("../img/icon-menu-close.svg") no-repeat;
+  }
+}*/
 
 .main-navigation__list {
   .ul-reset();
@@ -61,6 +104,14 @@
   &--delivery {
     display: none;
   }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .main-navigation__link {
@@ -78,15 +129,51 @@
     padding-top: 23px;
     cursor: pointer;
   }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover path {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active path {
+    fill: #63d1bb;
+    opacity: 0.3;
+  }
 }
 
 .main-navigation__link-icon {
   padding-right: 26px;
+}
+
+.main-navigation__link-icon path {
   opacity: 0.2;
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-navigation--closed .main-navigation__item {
+    display: none;
+
+    &--active {
+      display: block;
+      border-bottom: none;
+    }
+  }
+
+  .main-navigation--nojs .main-navigation__button {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .main-header {
+  .main-navigation {
     width: 668px;
   }
 
@@ -177,7 +264,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-header {
+  .main-navigation {
     width: 100%;
   }
 

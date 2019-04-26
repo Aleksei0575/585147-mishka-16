@@ -13,11 +13,11 @@
     <!-- Блок шапки сайта -->
     <header class="main-header container">
       <!-- Блок с меню -->
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <!-- Кнопка открывающая меню -->
-        <button class="main-navigation__button main-navigation__button--open main-navigation__button--close" type="button">Открыть меню</button>
+        <button class="main-navigation__button" type="button">Открыть меню</button>
         <ul class="main-navigation__list site-list">
-          <li class="main-navigation__item main-navigation__item--logo">
+          <li class="main-navigation__item main-navigation__item--logo main-navigation__item--active">
             <!-- Логотип сайта -->
             <a class="main-navigation__logo-link" href="index.html">
               <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
@@ -231,5 +231,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-navigation');
+      var navToggle = document.querySelector('.main-navigation__button');
+
+      navMain.classList.remove('main-navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-navigation--closed')) {
+      navMain.classList.remove('main-navigation--closed');
+      navMain.classList.add('main-navigation--opened');
+      } else {
+      navMain.classList.add('main-navigation--closed');
+      navMain.classList.remove('main-navigation--opened');
+      }
+    });
+</script>
   </body>
 </html>
