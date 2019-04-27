@@ -33,7 +33,7 @@
 .main-navigation--closed .main-navigation__button::before {
   .pseudo-elem();
   top: 1px;
-  right: 1;
+  right: 1px;
   display: block;
   width: 20px;
   height: 14px;
@@ -53,6 +53,7 @@
 .main-navigation__list {
   .ul-reset();
   width: 100%;
+  /*background-color: #FFF;*/
 }
 
 .main-navigation__item {
@@ -146,6 +147,10 @@
   .main-navigation--nojs .main-navigation__button {
     display: none;
   }
+
+  .main-navigation__list {
+    background-color: #FFF;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -178,7 +183,7 @@
     }
 
     &--catalog {
-      padding-right: 30px;
+      padding-right: 35px;
       border-top: none;
       order: 2;
     }
@@ -210,6 +215,8 @@
 
   .main-navigation__logo-link {
     margin: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 
   .main-navigation__link {
@@ -218,23 +225,28 @@
 
     &--catalog {
       font-size: 15px;
-      padding-top: 24px;
+      padding-top: 18px;
     }
 
     &--order {
       font-size: 15px;
-      padding-top: 24px;
+      padding-top: 18px;
     }
 
     &--search {
       font-size: 0;
       padding-left: 34px;
+      padding-top: 36px;
+    }
+
+    &--cart {
+      padding-top: 32px;
     }
 
     &--delivery {
       font-family: "Open Sans", "Arial", sans-serif;
       font-size: 15px;
-      padding-top: 25px;
+      padding-top: 18px;
     }
   }
 }
