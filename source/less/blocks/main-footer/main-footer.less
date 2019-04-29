@@ -112,10 +112,41 @@
   }
 
   .main-footer__logo {
-    margin-right: 245px;
+    margin-right: 286px;
+    padding-top: 51px;
+    padding-bottom: 50px;
   }
+
+  .main-footer__link {
+  &--instagram {
+    &::before {
+      top: 5px;
+    }
+  }
+
+  &--facebook {
+    &::before {
+      top: -1px;
+    }
+  }
+
+  &--twitter {
+    &::before {
+      top: 5px;
+    }
+  }
+}
 
   .main-footer__copyright {
     margin-left: 420px;
+    padding-bottom: 6px;
   }
+
+  .main-footer__developed-by {
+    padding-top: 29px;
+  }
+
+  .main-footer__developed-link {
+    padding-top: 25px;
+}
 }
