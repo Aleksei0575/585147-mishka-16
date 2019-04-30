@@ -13,11 +13,11 @@
     <!-- Блок шапки сайта -->
     <header class="main-header container">
       <!-- Блок с меню -->
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <!-- Кнопка открывающая меню -->
-        <button class="main-navigation__button main-navigation__button--open main-navigation__button--close" type="button">Открыть меню</button>
+        <button class="main-navigation__button" type="button">Открыть меню</button>
         <ul class="main-navigation__list site-list">
-          <li class="main-navigation__item main-navigation__item--logo">
+          <li class="main-navigation__item main-navigation__item--logo main-navigation__item--active">
             <!-- Логотип сайта -->
             <a class="main-navigation__logo-link" href="index.html">
               <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
@@ -169,7 +169,7 @@
         </p>
       </section>
       <!-- Блок с контактами -->
-      <section class="contacts container">
+      <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__wrapper">
           <div class="contacts__mail">
@@ -177,7 +177,7 @@
             <a class="contacts__link link-mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </div>
           <div class="contacts__address">
-            <span class="contacts__name">адрес:</span>
+            <span class="contacts__name contacts__addr">адрес:</span>
             <p class="contacts__text">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
           </div>
         </div>
@@ -187,7 +187,6 @@
         <p class="contacts__write-us">
           <a class="contacts__write-us-link button" href="form.html">Напишите нам</a>
         </p>
-
       </section>
     </main>
     <!-- Подвал сайта с блокм социальных сетей и копирайтом -->
@@ -231,5 +230,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-navigation');
+      var navToggle = document.querySelector('.main-navigation__button');
+
+      navMain.classList.remove('main-navigation--nojs');
+
+      navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-navigation--closed')) {
+      navMain.classList.remove('main-navigation--closed');
+      navMain.classList.add('main-navigation--opened');
+      } else {
+      navMain.classList.add('main-navigation--closed');
+      navMain.classList.remove('main-navigation--opened');
+      }
+    });
+    </script>
   </body>
 </html>

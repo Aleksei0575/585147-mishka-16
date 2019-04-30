@@ -1,12 +1,13 @@
 .catalog {
   background-color: #f1f1f1;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 76px;
   margin-bottom: 30px;
 }
 
 .catalog__title {
   .block-title-text();
+  font-size: 27px;
   text-align: center;
 }
 
@@ -15,6 +16,7 @@
     width: 100%;
     margin-top: -69px;
     padding-bottom: 80px;
+    margin-bottom: 67px;
 
     &::after {
       .pseudo-elem();
@@ -26,6 +28,8 @@
     }
 
     .catalog__title {
+      padding-top: 30px;
+      padding-bottom: 12px;
       font-size: 43px;
       line-height: 50px;
     }
@@ -34,16 +38,18 @@
 
 @media (min-width: @desktop-width) {
   .catalog {
-    margin-top: -50px;
-    padding-bottom: 90px;
+    margin-top: -45px;
+    margin-bottom: 111px;
+    padding-bottom: 109px;
 
     &::after {
       height: 34px;
-      transform: translate(0, 57px);
+      transform: translate(0, 75px);
       background-size: auto 34px;
     }
 
     .catalog__title {
+      padding-top: 25px;
       font-size: 53px;
       line-height: 57px;
     }

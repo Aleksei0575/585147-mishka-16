@@ -68,7 +68,7 @@
 .main-footer__developed-by {
   display: inline-block;
   margin-left: 39px;
-  padding-top: 30px;
+  padding-top: 24px;
   padding-right: 25px;
   font-size: 19px;
   line-height: 18px;
@@ -99,10 +99,43 @@
   .main-footer__logo {
     display: block;
     margin-right: 84px;
+    padding-top: 51px;
+    padding-bottom: 50px;
+  }
+
+  .main-footer__link {
+    &--instagram {
+      &::before {
+        top: 6px;
+        left: 48px;
+      }
+    }
+
+    &--facebook {
+      &::before {
+        top: 1px;
+        left: 111px;
+      }
+    }
+
+    &--twitter {
+      &::before {
+        top: 6px;
+        left: 165px;
+      }
+    }
   }
 
   .main-footer__copyright {
     margin-left: 205px;
+  }
+
+  .main-footer__developed-by {
+    padding-top: 47px;
+  }
+
+  .main-footer__developed-link {
+    padding-top: 41px;
   }
 }
 
@@ -112,10 +145,41 @@
   }
 
   .main-footer__logo {
-    margin-right: 245px;
+    margin-right: 286px;
+    padding-top: 51px;
+    padding-bottom: 50px;
+  }
+
+  .main-footer__link {
+    &--instagram {
+      &::before {
+        top: 5px;
+      }
+    }
+
+    &--facebook {
+      &::before {
+        top: -1px;
+      }
+    }
+
+    &--twitter {
+      &::before {
+        top: 5px;
+      }
+    }
   }
 
   .main-footer__copyright {
     margin-left: 420px;
+    padding-bottom: 6px;
+  }
+
+  .main-footer__developed-by {
+    padding-top: 29px;
+  }
+
+  .main-footer__developed-link {
+    padding-top: 25px;
   }
 }
