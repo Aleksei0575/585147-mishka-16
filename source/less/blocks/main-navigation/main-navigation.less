@@ -6,12 +6,17 @@
 }
 
 .main-navigation__logo-link {
-  width: 85px;
+  width: 86px;
   height: 35px;
   display: block;
   margin: 0 auto;
   padding-bottom: 22px;
   padding-top: 23px;
+}
+
+.main-header__logo-image {
+  width: 86px;
+  height: 35px;
 }
 
 .main-navigation__button {
@@ -211,9 +216,15 @@
   }
 
   .main-navigation__logo-link {
+    width: 100%;
     margin: 0;
-    padding-top: 26px;
+    padding-top: 22px;
     padding-bottom: 26px;
+  }
+
+  .main-header__logo-image {
+    width: 112px;
+    height: 46px;
   }
 
   .main-navigation__link {
@@ -272,18 +283,18 @@
     }
 
     &--order {
-      width: 250px;
+      width: 230px;
       padding-top: 15px;
       padding-left: 35px;
       order: 0;
     }
 
     &--logo {
+      width: 229px;
       padding-top: 3px;
+      padding-right: 19px;
       padding-bottom: 16px;
-      padding-right: 127px;
       order: 1;
-      width: 102px;
     }
 
     &--cart {
@@ -294,6 +305,8 @@
       width: 85px;
       order: 1;
       margin-left: 0;
+      padding-top: 4px;
+      padding-bottom: 4px;
     }
 
     &--new {
@@ -315,8 +328,14 @@
   }
 
   .main-navigation__logo-link {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 6px;
+    padding-bottom: 45px;
+    padding-right: 5px;
+  }
+
+  .main-header__logo-image {
+    width: 149px;
+    height: auto;
   }
 
   .main-navigation__link {
@@ -334,7 +353,7 @@
 
     &--cart {
       width: 254px;
-      padding-top: 31px;
+      padding-top: 23px;
     }
 
     &--new {
@@ -347,6 +366,12 @@
 
     &--delivery {
       padding-top: 0;
+    }
+  }
+
+  .main-navigation__link-icon {
+    &--cart {
+      padding-top: 10px;
     }
   }
 }
