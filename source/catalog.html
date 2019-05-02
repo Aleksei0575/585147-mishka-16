@@ -76,7 +76,11 @@
             <li class="products__item products__item--hare product-card">
               <a class="products__link" href="catalog-index.html">
                 <div class="products__info-item">
-                  <img class="products__image" src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Изображение зайчика">
+                  <picture>
+                    <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                    <img class="products__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение зайчика">
+                  </picture>
                 </div>
               </a>
               <div class="products__info">
@@ -98,7 +102,11 @@
             <li class="products__item products__item--bowl product-card">
               <a class="products__link" href="catalog-index.html">
                 <div class="products__info-item">
-                  <img class="products__image" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Изображение вязаной корзинки">
+                  <picture>
+                    <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                    <img class="products__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение вязаной корзинки">
+                  </picture>
                 </div>
               </a>
               <div class="products__info">
@@ -120,7 +128,12 @@
             <li class="products__item products__item--toys product-card">
               <a class="products__link" href="catalog-index.html">
                 <div class="products__info-item">
-                  <img class="products__image" src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Изображение большой вязаной корзины">
+                  <picture>
+                    <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                    <img class="products__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" width="260" height="195" alt="Изображение большой вязаной корзины">
+                  </picture>
+
                 </div>
               </a>
               <div class="products__info">
@@ -144,7 +157,11 @@
       <!-- Блок с видеороликом -->
       <section class="video container">
         <div class="video__substrate">
-          <img class="video__image" src="img/video-mobile@1x.jpg" width="260" height="150" alt="Изображение заставка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Изображение заставка">
+          </picture>
           <button class="video__button" type="button">Play</button>
         </div>
         <div class="video__info">
