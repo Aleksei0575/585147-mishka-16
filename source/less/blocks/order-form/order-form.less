@@ -342,6 +342,14 @@
     &::after {
       position: inherit;
     }
+
+    &--phone {
+      padding-top: 7px;
+    }
+
+    &--email {
+      padding-top: 5px;
+    }
   }
 
   .order-form__list-radio {
@@ -353,7 +361,7 @@
       width: 253px;
       padding-left: 81px;
       padding-bottom: 58px;
-  }
+    }
 
     li:last-child {
       width: 173px;
@@ -395,6 +403,12 @@
         height: 22px;
         background-size: 33px 22px;
       }
+    }
+
+    &--text {
+      padding-top: 1px;
+      padding-bottom: 15px;
+      padding-left: 19px;
     }
   }
 
@@ -515,14 +529,6 @@
     }
   }
 
-  .order-form__input {
-    &--text {
-      padding-top: 1px;
-      padding-bottom: 15px;
-      padding-left: 19px;
-    }
-  }
-
   /*Секция с полем ввода телефона*/
   .order-form__phone {
     padding-top: 61px;
@@ -542,14 +548,8 @@
     }
   }
 
-  .order-form__legend {
-    &--phone {
-      padding-top: 7px;
-    }
-  }
-
   .order-form__input-phonetext {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 13px;
     padding-left: 15px;
     background-color: @line-color;
@@ -571,14 +571,8 @@
     width: 486px;
   }
 
-  .order-form__legend {
-    &--email {
-      padding-top: 5px;
-    }
-  }
-
   .order-form__input-text {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 11px;
     padding-left: 15px;
     font-size: 19px;
