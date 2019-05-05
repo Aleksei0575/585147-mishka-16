@@ -9,9 +9,39 @@
 .order-page__paragraph {
   width: 242px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+  .order-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .order-page__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .order-page__paragraph {
+    width: 668px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 75px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-page__paragraph {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+  }
 }
