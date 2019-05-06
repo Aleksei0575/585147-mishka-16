@@ -11,18 +11,58 @@
   margin: 0;
   padding: 0;
   border: none;
-  border-top: 1px solid @light-green;
+  /*border-top: 1px solid @light-green;*/
 }
 
 .order-form__legend {
-  margin-bottom: 20px;
-  padding-right: 27px;
+  position: relative;
+  /*padding-right: 27px;*/
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
   color: @light-green;
+
+  &--radio {
+    margin-bottom: 34px;
+  }
+
+  &--checkbox {
+    margin-bottom: 25px;
+  }
+
+  &--user {
+    margin-bottom: 29px;
+  }
+
+  &--phone {
+    margin-bottom: 10px;
+  }
+
+  &--other {
+    margin-bottom: 23px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 58px;
+    width: 198px;
+    height: 1px;
+    /*margin-left: 27px;*/
+    background-color: @light-green;
+  }
+
+  &--email {
+    margin-bottom: 18px;
+
+    &::after {
+      left: 70px;
+      width: 188px;
+    }
+  }
 }
 
 .order-form__list-radio {
@@ -34,14 +74,14 @@
   li:first-child {
     width: 126px;
     padding-left: 62px;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
     position: relative;
   }
 
   li:last-child {
     width: 155px;
     padding-left: 62px;
-    padding-bottom: 33px;
+    padding-bottom: 45px;
     position: relative;
   }
 }
@@ -99,8 +139,8 @@
   &--text {
     width: 100%;
     padding: 0;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 16px;
+    padding-bottom: 15px;
     border: 0;
     border-bottom: 2px solid @title-text-color;
     font-size: 17px;
@@ -119,7 +159,7 @@
     width: 57px;
     padding-left: 62px;
     padding-top: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 33px;
     position: relative;
   }
 
@@ -127,7 +167,7 @@
     width: 57px;
     padding-left: 62px;
     padding-top: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 33px;
     position: relative;
   }
 
@@ -135,7 +175,7 @@
     width: 103px;
     padding-left: 62px;
     padding-top: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 33px;
     position: relative;
   }
 
@@ -143,7 +183,7 @@
     width: 71px;
     padding-left: 62px;
     padding-top: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 33px;
     position: relative;
   }
 
@@ -151,7 +191,7 @@
     width: 76px;
     padding-left: 62px;
     padding-top: 10px;
-    padding-bottom: 25px;
+    padding-bottom: 33px;
     position: relative;
   }
 
@@ -159,7 +199,7 @@
     width: 107px;
     padding-left: 62px;
     padding-top: 10px;
-    padding-bottom: 33px;
+    padding-bottom: 42px;
     position: relative;
   }
 }
@@ -171,11 +211,11 @@
   line-height: 18px;
 
   li:first-child {
-    padding-bottom: 20px;
+    padding-bottom: 24px;
   }
 
   li:nth-child(2) {
-    padding-bottom: 20px;
+    padding-bottom: 22px;
   }
 
   li:last-child {
@@ -240,7 +280,7 @@
 .order-form__input-textarea {
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
   padding: 0;
   border: 2px solid @title-text-color;
   font-size: 17px;
@@ -255,7 +295,7 @@
 }
 
 .order-form__sending {
-  margin-bottom: 55px;
+  margin-bottom: 58px;
 }
 
 .order-form__note {
@@ -274,4 +314,426 @@
   line-height: 16px;
   color: @text-color;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__radio-button,
+  .order-form__checkbox-button,
+  .order-form__name-user,
+  .order-form__phone,
+  .order-form__email,
+  .order-form__textarea {
+    border: none;
+  }
+
+  /*Секция с радио-кнопками*/
+  .order-form__radio-button {
+    margin-bottom: 22px;
+  }
+
+  .order-form__radio-wrapper {
+    display: flex;
+  }
+
+  .order-form__legend {
+    width: 167px;
+    font-weight: 700;
+
+    &::after {
+      position: inherit;
+    }
+
+    &--phone {
+      padding-top: 7px;
+    }
+
+    &--email {
+      padding-top: 5px;
+    }
+
+    &--other {
+      padding-top: 18px;
+    }
+  }
+
+  .order-form__list-radio {
+    width: 331px;
+    font-size: 19px;
+    line-height: 18px;
+
+    li:first-child {
+      width: 253px;
+      padding-left: 81px;
+      padding-bottom: 58px;
+    }
+
+    li:last-child {
+      width: 173px;
+      padding-left: 81px;
+    }
+  }
+
+  .order-form__input {
+    &--radio + .order-form__label--radio {
+      &::after {
+        top: -19px;
+        left: -1px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &--radio:checked + .order-form__label--radio {
+      &::before {
+        top: -3px;
+        left: 15px;
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--checkbox + .order-form__label--checkbox {
+      &::after {
+        top: -18px;
+        width: 51px;
+        height: 50px;
+      }
+    }
+
+    &--checkbox:checked + .order-form__label--checkbox {
+      &::before {
+        top: -2px;
+        width: 33px;
+        height: 22px;
+        background-size: 33px 22px;
+      }
+    }
+
+    &--text {
+      padding-top: 1px;
+      padding-bottom: 15px;
+      padding-left: 19px;
+    }
+  }
+
+  /*Секция с чекбоксами*/
+  .order-form__checkbox-button {
+    padding-top: 66px;
+    background-color: @line-color;
+  }
+
+  .order-form__checkbox-wrapper {
+    display: flex;
+    /*margin-bottom: 88px;*/
+  }
+
+  .order-form__list-checkbox {
+    width: 451px;
+    font-size: 19px;
+    line-height: 18px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li:first-child {
+      width: 120px;
+      padding-left: 81px;
+      padding-top: 0;
+      margin-bottom: 25px;
+      margin-right: 61px;
+    }
+
+    li:nth-child(2) {
+      /*width: 120px;*/
+      padding-left: 81px;
+      padding-top: 0;
+      margin-bottom: 25px;
+    }
+
+    li:nth-child(3) {
+      width: 120px;
+      padding-left: 81px;
+      padding-top: 0;
+      margin-bottom: 25px;
+      margin-right: 61px;
+    }
+
+    li:nth-child(4) {
+      /*width: 120px;*/
+      padding-left: 81px;
+      padding-top: 0;
+      margin-bottom: 25px;
+    }
+
+    li:nth-child(5) {
+      width: 120px;
+      padding-left: 81px;
+      padding-top: 0;
+      margin-bottom: 25px;
+      margin-right: 61px;
+    }
+
+    li:nth-child(6) {
+      /*width: 120px;*/
+      padding-left: 81px;
+      padding-top: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  /* Секция с полями ввода информации */
+  .order-form__name-user {
+    padding-top: 67px;
+  }
+
+  .order-form__user-wrapper {
+    display: flex;
+  }
+
+  .order-form__list-user {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 19px;
+    }
+
+    li:first-child {
+      width: 499px;
+      padding-bottom: 39px;
+    }
+
+    li:nth-child(2) {
+      width: 499px;
+      padding-bottom: 39px;
+    }
+
+    li:last-child {
+      width: 499px;
+      padding-bottom: 51px;
+    }
+  }
+
+  .order-form__label {
+    &--name {
+      width: 46px;
+      margin-right: 25px;
+    }
+
+    &--surname {
+      width: 99px;
+      margin-right: 25px;
+    }
+
+    &--twoname {
+      width: 99px;
+      margin-right: 25px;
+    }
+  }
+
+  /*Секция с полем ввода телефона*/
+  .order-form__phone {
+    padding-top: 61px;
+    background-color: @line-color;
+  }
+
+  .order-form__phone-wrapper {
+    display: flex;
+  }
+
+  .order-form__item-phone {
+    width: 486px;
+
+    &::before {
+      top: -1px;
+      right: 12px;
+    }
+  }
+
+  .order-form__input-phonetext {
+    padding-top: 0;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    background-color: @line-color;
+  }
+
+  /*Секция с полем ввода эл. почты*/
+  .order-form__email {
+    padding-top: 4px;
+    background-color: @line-color;
+    /*background-color: rgba(255, 0, 0, 0.2);*/
+    padding-bottom: 16px;
+  }
+
+  .order-form__email-wrapper {
+    display: flex;
+  }
+
+  .order-form__item-email {
+    width: 486px;
+  }
+
+  .order-form__input-text {
+    padding-top: 0;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    font-size: 19px;
+    background-color: @line-color;
+  }
+
+  /*Секция с полем textarea*/
+  .order-form__textarea {
+    padding-top: 50px;
+    /*background-color: rgba(255, 0, 0, 0.2);*/
+    padding-bottom: 20px;
+  }
+
+  .order-form__textarea-wrapper {
+    display: flex;
+  }
+
+  .order-form__item-area {
+    width: 500px;
+  }
+
+  .order-form__input-textarea {
+    margin-bottom: 9px;
+    font-size: 19px;
+
+    &::placeholder {
+      width: 366px;
+      padding-top: 13px;
+      padding-left: 17px;
+    }
+  }
+
+  /*Секция с кнопкой отпраки*/
+  .order-form__sending {
+    padding-top: 14px;
+    /*background-color: rgba(255, 0, 0, 0.2);*/
+    padding-bottom: 0;
+    margin-bottom: 52px;
+  }
+
+  .order-form__sending-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-form__note {
+    /*margin-top: 10px;*/
+    padding-bottom: 0;
+    font-size: 17px;
+    line-height: 30px;
+    order: 1;
+  }
+
+  .order-form__submit {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__radio-wrapper {
+    width: 920px;
+  }
+
+  .order-form__legend {
+    width: 110px;
+  }
+
+  /*Секция с чекбоксами*/
+  .order-form__checkbox-wrapper {
+    width: 920px;
+  }
+
+  .order-form__list-checkbox {
+    width: 790px;
+
+    li:nth-child(2) {
+      width: 120px;
+      margin-right: 61px;
+    }
+
+    li:nth-child(4) {
+      width: 120px;
+      margin-right: 61px;
+    }
+
+    li:nth-child(5) {
+      margin-right: 61px;
+    }
+  }
+
+  /* Секция с полями ввода информации */
+  .order-form__user-wrapper {
+    width: 920px;
+  }
+
+  .order-form__list-user {
+    width: 700px;
+
+    li:first-child {
+      width: 699px;
+    }
+
+    li:nth-child(2) {
+      width: 699px;
+    }
+
+    li:last-child {
+      width: 699px;
+    }
+  }
+
+  /*Секция с полем ввода телефона*/
+  .order-form__phone-wrapper {
+    width: 920px;
+  }
+
+  .order-form__item-phone {
+    width: 686px;
+
+    &::before {
+      top: -1px;
+      right: -5px;
+    }
+  }
+
+  /*Секция с полем ввода эл. почты*/
+  .order-form__email-wrapper {
+    width: 920px;
+  }
+
+  .order-form__item-email {
+    width: 686px;
+
+    &::before {
+      top: -2px;
+      right: -9px;
+    }
+  }
+
+  /*Секция с полем textarea*/
+  .order-form__textarea {
+    padding-bottom: 14px;
+  }
+
+  .order-form__textarea-wrapper {
+    width: 920px;
+  }
+
+  .order-form__item-area {
+    width: 700px;
+  }
+
+  .order-form__sending-wrapper {
+    width: 700px;
+  }
 }
