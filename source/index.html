@@ -238,6 +238,34 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <span class="modal__text">Выберите размер:</span>
+        <form action="https://echo.htmlacademy.ru" method="post" class="modal__form-send form-send">
+          <div class="form-send__wrapper">
+            <ul class="form-send__list-checkbox">
+              <li class="form-send__item form-send__item--small">
+                <input type="checkbox" name="small-size" id="small" value="small-size" class="visually-hidden" checked>
+                <label for="small" class="form-send__checkbox form-send__checkbox--size-s">s</label>
+              </li>
+              <li class="form-send__item form-send__item--average">
+                <input type="checkbox" name="average-size" id="average" value="average-size" class="visually-hidden">
+                <label for="average" class="form-send__checkbox form-send__checkbox--size-m">m</label>
+              </li>
+              <li class="form-send__item form-send__item--big">
+                <input type="checkbox" name="big-size" id="big" value="big-size" class="visually-hidden">
+                <label for="average" class="form-send__checkbox form-send__checkbox--size-l">l</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-send__button-wrapper">
+            <button class="form-send__button button" type="submit">Добавить</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/main-nav.js"></script>
   </body>
 </html>
