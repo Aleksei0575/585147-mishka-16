@@ -5,11 +5,14 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <meta name="keywords" content="милые штучки, милые игрушки, ручная работа, игрушки ручной работы, милые вещи для дома ручной работы, предметы интерьера, детские игрушки, вязаные корзинки">
     <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
   </head>
   <body class="global-style">
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <!-- Блок шапки сайта -->
     <header class="main-header container">
       <!-- Блок с меню -->
@@ -36,14 +39,14 @@
           <li class="main-navigation__item main-navigation__item--search">
             <a class="main-navigation__link main-navigation__link--search" href="#">
               <svg class="main-navigation__link-icon main-navigation__link-icon--search" x="0px" y="0px" width="17.6px" height="17.6px">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
+                <use xlink:href="#icon-search"/>
               </svg>
               Поиск по сайту</a>
           </li>
           <li class="main-navigation__item main-navigation__item--cart">
             <a class="main-navigation__link main-navigation__link--cart" href="#">
               <svg class="main-navigation__link-icon main-navigation__link-icon--cart" x="0px" y="0px" width="20.294px" height="18.849px">
-                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                <use xlink:href="#icon-cart"/>
               </svg>
               Корзина: <span>пока пуста</span>
             </a>
@@ -211,7 +214,7 @@
         <div class="main-footer__logo">
           <a class="main-footer__logo-link" href="index.html">
             <svg x="0px" y="0px" width="101.615px" height="34.056px">
-              <use xlink:href="img/sprite.svg#icon-footer"></use>
+              <use xlink:href="#icon-logo-footer"/>
             </svg>
           </a>
         </div>
@@ -232,12 +235,40 @@
           <b class="main-footer__developed-by">Разработано</b>
           <a class="main-footer__developed-link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg x="0px" y="0px" width="26.943px" height="34.09px">
-              <use xlink:href="img/sprite.svg#icon-academy"></use>
+              <use xlink:href="#icon-logo-htmlacademy"/>
             </svg>
           </a>
         </div>
       </div>
     </footer>
+    <!-- Модальное окно -->
+    <div class="modal visually-hidden">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <span class="modal__text">Выберите размер:</span>
+        <form action="https://echo.htmlacademy.ru" method="post" class="modal__form-send form-send">
+          <div class="form-send__wrapper">
+            <ul class="form-send__list-checkbox">
+              <li class="form-send__item form-send__item--small">
+                <input type="checkbox" name="small-size" id="small" value="small-size" class="visually-hidden" checked="">
+                <label for="small" class="form-send__checkbox form-send__checkbox--size-s">s</label>
+              </li>
+              <li class="form-send__item form-send__item--average">
+                <input type="checkbox" name="average-size" id="average" value="average-size" class="visually-hidden">
+                <label for="average" class="form-send__checkbox form-send__checkbox--size-m">m</label>
+              </li>
+              <li class="form-send__item form-send__item--big">
+                <input type="checkbox" name="big-size" id="big" value="big-size" class="visually-hidden">
+                <label for="average" class="form-send__checkbox form-send__checkbox--size-l">l</label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-send__button-wrapper">
+            <button class="form-send__button button" type="submit">Добавить</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/main-nav.js"></script>
   </body>
 </html>
