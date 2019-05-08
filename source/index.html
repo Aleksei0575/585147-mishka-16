@@ -5,11 +5,14 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <meta name="keywords" content="милые штучки, милые игрушки, ручная работа, игрушки ручной работы, милые вещи для дома ручной работы, предметы интерьера, детские игрушки, вязаные корзинки">
     <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
   </head>
   <body class="global-style">
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <!-- Блок шапки сайта -->
     <header class="main-header container">
       <!-- Блок с меню -->
@@ -36,14 +39,14 @@
           <li class="main-navigation__item main-navigation__item--search">
             <a class="main-navigation__link main-navigation__link--search" href="#">
               <svg class="main-navigation__link-icon main-navigation__link-icon--search" x="0px" y="0px" width="17.6px" height="17.6px">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
+                <use xlink:href="img/sprite.svg#icon-search"/>
               </svg>
               Поиск по сайту</a>
           </li>
           <li class="main-navigation__item main-navigation__item--cart">
             <a class="main-navigation__link main-navigation__link--cart" href="#">
               <svg class="main-navigation__link-icon main-navigation__link-icon--cart" x="0px" y="0px" width="20.294px" height="18.849px">
-                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                <use xlink:href="img/sprite.svg#icon-cart"/>
               </svg>
               Корзина: <span>пока пуста</span>
             </a>
@@ -211,8 +214,7 @@
         <div class="main-footer__logo">
           <a class="main-footer__logo-link" href="index.html">
             <svg x="0px" y="0px" width="101.615px" height="34.056px">
-              <use xlink:href="img/sprite.svg#icon-footer"></use>
-            </svg>
+              <use xlink:href="img/sprite.svg#icon-logo-footer"/>
           </a>
         </div>
         <div class="main-footer__social social">
@@ -232,8 +234,7 @@
           <b class="main-footer__developed-by">Разработано</b>
           <a class="main-footer__developed-link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg x="0px" y="0px" width="26.943px" height="34.09px">
-              <use xlink:href="img/sprite.svg#icon-academy"></use>
-            </svg>
+              <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"/>
           </a>
         </div>
       </div>
@@ -247,7 +248,7 @@
           <div class="form-send__wrapper">
             <ul class="form-send__list-checkbox">
               <li class="form-send__item form-send__item--small">
-                <input type="checkbox" name="small-size" id="small" value="small-size" class="visually-hidden" checked>
+                <input type="checkbox" name="small-size" id="small" value="small-size" class="visually-hidden" checked="">
                 <label for="small" class="form-send__checkbox form-send__checkbox--size-s">s</label>
               </li>
               <li class="form-send__item form-send__item--average">
