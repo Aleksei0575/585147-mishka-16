@@ -20,6 +20,8 @@ var include = require("posthtml-include");
 var del = require("del");
 
 var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
+var pipeline = require("readable-stream").pipeline;
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -105,13 +107,22 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+gulp.task("compress", function () {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename("main.min.js"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
   "images",
   "sprite",
-  "html"
+  "html",
+  "compress"
 ));
 
 // gulp.task("build", gulp.series("css", "sprite", "html"));
