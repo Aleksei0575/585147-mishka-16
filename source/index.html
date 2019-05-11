@@ -20,7 +20,7 @@
       <!-- Блок с меню -->
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
           <!-- Кнопка открывающая меню -->
-        <button class="main-navigation__button" type="button">Открыть меню</button>
+        <button class="main-navigation__button main-navigation__button--closed main-navigation__button--opened" type="button">Открыть меню</button>
         <ul class="main-navigation__list site-list">
           <li class="main-navigation__item main-navigation__item--logo main-navigation__item--active">
             <!-- Логотип сайта -->
@@ -79,11 +79,17 @@
         <div class="promo__list interior-block">
           <a class="promo__link" href="#">
             <span class="promo__item promo__item--interior">Предметы интерьера</span>
+            <svg class="promo__icon promo__icon--interior" x="0px" y="0px" width="40px" height="62px">
+              <use xlink:href="#icon-interior"/>
+            </svg>
           </a>
         </div>
         <div class="promo__list toy-block">
           <a class="promo__link" href="#">
             <span class="promo__item promo__item--toy">Детские игрушки</span>
+            <svg class="promo__icon promo__icon--toy" x="0px" y="0px" width="60px" height="62px">
+              <use xlink:href="#icon-toy"/>
+            </svg>
           </a>
         </div>
       </section>
@@ -144,12 +150,42 @@
       <section class="about-us">
         <h2 class="about-us__title">Коротко о нас:</h2>
         <ul class="about-us__list">
-          <li class="about-us__item about-us__item--flower">Экологически чистые материалы</li>
-          <li class="about-us__item about-us__item--money">Скандинавский стиль по российской цене</li>
-          <li class="about-us__item about-us__item--heart">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item about-us__item--ball">Связано вручную с любовью и умилением</li>
-          <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
-          <li class="about-us__item about-us__item--box">Поставляется в подарочной упаковке</li>
+          <li class="about-us__item about-us__item--flower">
+            <svg class="about-us__icon about-us__icon--flower" x="0px" y="0px" width="32px" height="37px">
+              <use xlink:href="#icon-feature-flower"/>
+            </svg>
+            Экологически чистые материалы
+          </li>
+          <li class="about-us__item about-us__item--money">
+            <svg class="about-us__icon about-us__icon--money" x="0px" y="0px" width="47px" height="27px">
+              <use xlink:href="#icon-feature-money"/>
+            </svg>
+            Скандинавский стиль по российской цене
+          </li>
+          <li class="about-us__item about-us__item--heart">
+            <svg class="about-us__icon about-us__icon--heart" x="0px" y="0px" width="34px" height="27px">
+              <use xlink:href="#icon-feature-heart"/>
+            </svg>
+            Увеличивает лайки на фотографиях
+          </li>
+          <li class="about-us__item about-us__item--ball">
+            <svg class="about-us__icon about-us__icon--ball" x="0px" y="0px" width="35px" height="34px">
+              <use xlink:href="#icon-feature-ball"/>
+            </svg>
+            Связано вручную с любовью и умилением
+          </li>
+          <li class="about-us__item about-us__item--rocket">
+            <svg class="about-us__icon about-us__icon--rocket" x="0px" y="0px" width="55px" height="23px">
+              <use xlink:href="#icon-feature-rocket"/>
+            </svg>
+            Поддержка отечественного производителя
+          </li>
+          <li class="about-us__item about-us__item--box">
+            <svg class="about-us__icon about-us__icon--box" x="0px" y="0px" width="33px" height="32px">
+              <use xlink:href="#icon-feature-gift"/>
+            </svg>
+            Поставляется в подарочной упаковке
+          </li>
         </ul>
       </section>
       <!-- Блок с отзывами -->
@@ -204,6 +240,9 @@
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Магазин на карте">
           </picture>
+          <svg class="contacts__icon contacts__icon--marker" x="0px" y="0px" width="67px" height="100px">
+            <use xlink:href="#icon-map-pin"/>
+          </svg>
         </div>
         <p class="contacts__write-us">
           <a class="contacts__write-us-link button" href="form.html">Напишите нам</a>
@@ -223,13 +262,27 @@
         <div class="main-footer__social social">
           <ul class="main-footer__list">
             <li class="main-footer__item">
-              <a class="main-footer__link main-footer__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="main-footer__link main-footer__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <svg class="main-footer__icon main-footer__icon--instagram" x="0px" y="0px" width="22px" height="21px">
+                  <use xlink:href="#icon-insta"/>
+                </svg>
+                Мы в Инстаграме
+              </a>
             </li>
             <li class="main-footer__item">
-              <a class="main-footer__link main-footer__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="main-footer__link main-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <svg class="main-footer__icon main-footer__icon--facebook" x="0px" y="0px" width="15px" height="28px">
+                  <use xlink:href="#icon-fb"/>
+                </svg>
+                Мы в Фейсбуке
+              </a>
             </li>
             <li class="main-footer__item">
-              <a class="main-footer__link main-footer__link--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+              <a class="main-footer__link main-footer__link--twitter" href="https://www.twitter.com/htmlacademy">
+                <svg class="main-footer__icon main-footer__icon--twitter" x="0px" y="0px" width="23px" height="20px">
+                  <use xlink:href="#icon-twitter"/>
+                </svg>
+              Мы в Твиттере</a>
             </li>
           </ul>
         </div>

@@ -67,6 +67,15 @@
 
   &--logo {
     text-align: center;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--catalog {
@@ -110,7 +119,8 @@
     cursor: pointer;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: rgba(0, 0, 0, 0.6);
   }
 
@@ -118,12 +128,8 @@
     color: rgba(0, 0, 0, 0.3);
   }
 
-  /*&:hover path {
-    fill: #63d1bb;
-    opacity: 1;
-  }*/
-
-  &:hover .main-navigation__link-icon {
+  &:hover .main-navigation__link-icon,
+  &:focus .main-navigation__link-icon {
     fill: #63d1bb;
     opacity: 1;
   }
@@ -132,11 +138,6 @@
     fill: #63d1bb;
     opacity: 0.3;
   }
-
-  /*&:active path {
-    fill: #63d1bb;
-    opacity: 0.3;
-  }*/
 }
 
 .main-navigation__link-icon {
@@ -167,8 +168,20 @@
     }
   }
 
-  .main-navigation--nojs .main-navigation__button {
-    display: none;
+  .main-navigation--nojs .main-navigation__button::before {
+    width: 21px;
+    height: 20px;
+    background: url("../img/icon-menu-close.svg") no-repeat;
+  }
+
+  .main-navigation--nojs .main-navigation__item {
+    display: block;
+
+    &--new,
+    &--sale,
+    &--delivery {
+      display: none;
+    }
   }
 
   .main-navigation__list {

@@ -8,6 +8,14 @@
 
 .promo__link {
   color: #ffffff;
+
+  &:hover .promo__icon {
+    opacity: 0.7;
+  }
+
+  &:active .promo__icon {
+    opacity: 0.3;
+  }
 }
 
 .promo__item {
@@ -21,47 +29,33 @@
   line-height: 24px;
   font-weight: 700;
 
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.promo__icon {
+  .pseudo-elem();
+
   &--interior {
-    &::after {
-      .pseudo-elem();
-      top: 15px;
-      right: 35px;
-      width: 40px;
-      height: 62px;
-
-      background-image: url("../img/icon-interior.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      opacity: 0.5;
-    }
-
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
-    }
-
-    &:active {
-      &::after {
-        opacity: 0.2;
-      }
-    }
+    top: 15px;
+    right: 35px;
+    width: 40px;
+    height: 62px;
+    opacity: 0.5;
   }
 
   &--toy {
-    &::after {
-      .pseudo-elem();
-      top: 15px;
-      right: 25px;
-      width: 60px;
-      height: 60px;
-
-      background-image: url("../img/icon-toy.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      opacity: 0.5;
-    }
+    top: 15px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
   }
+
+  /*&:hover {
+    opacity: 1;
+  }*/
 }
 
 @media (min-width: @tablet-width) {
@@ -89,6 +83,11 @@
   .promo__list {
     width: 334px;
     margin-bottom: 140px;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-5px);
+    }
   }
 
   .promo__item {
@@ -97,17 +96,15 @@
     padding-left: 36px;
     font-size: 20px;
     line-height: 30px;
+  }
 
+  .promo__icon {
     &--interior {
-      &::after {
-        transform: translateY(15px);
-      }
+      transform: translateY(15px);
     }
 
     &--toy {
-      &::after {
-        transform: translateY(15px);
-      }
+      transform: translateY(15px);
     }
   }
 }

@@ -17,6 +17,14 @@
   &--bowl {
     margin-bottom: 31px;
   }
+
+  &:hover {
+    box-shadow: 0px 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .products__image {
@@ -76,9 +84,24 @@
   border-top: 1px solid @line-color-catalog;
 }
 
+.products__cart {
+  opacity: 0.2;
+
+  &:hover,
+  &:active {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: #63d1bb;
+    opacity: 0.3;
+  }
+}
+
 .products__price {
   display: inline-block;
-  margin-right: 108px;
+  margin-right: 107px;
   padding-top: 25px;
   padding-bottom: 25px;
 
@@ -174,7 +197,7 @@
     font-size: 17px;
 
     &--hare {
-      margin-right: 167px;
+      margin-right: 166px;
     }
 
     &--bowl {
@@ -182,7 +205,7 @@
     }
 
     &--toys {
-      margin-right: 167px;
+      margin-right: 166px;
     }
   }
 }

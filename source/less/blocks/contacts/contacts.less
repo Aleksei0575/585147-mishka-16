@@ -20,6 +20,16 @@
   color: @text-color;
   padding-bottom: 4px;
   border-bottom: 1px solid @light-green;
+
+  &:hover,
+  &:focus {
+    color: #46c1ae;
+  }
+
+  &:active {
+    color: rgba(70, 193, 174, 0.3);
+    border-bottom: 1px solid rgba(70, 193, 174, 0.3);
+  }
 }
 
 .contacts__text {
@@ -30,14 +40,23 @@
 }
 
 .contacts__map {
-  width: 100%;
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   margin-bottom: 41px;
+  position: relative;
 }
 
 .contacts__map-image {
   width: 100%;
   margin-bottom: 39px;
+}
+
+.contacts__icon {
+  .pseudo-elem();
+  top: 140px;
+  left: 140px;
+  width: 67px;
+  height: 100px;
 }
 
 .contacts__write-us {
@@ -127,6 +146,11 @@
     height: 457px;
   }
 
+  .contacts__icon {
+    top: 140px;
+    left: 364px;
+  }
+
   .contacts__write-us {
     display: flex;
     justify-content: center;
@@ -181,6 +205,11 @@
   .contacts__map-image {
     height: 457px;
     margin-bottom: 0;
+  }
+
+  .contacts__icon {
+    top: 140px;
+    left: 243px;
   }
 
   .contacts__write-us {
