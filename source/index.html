@@ -28,7 +28,7 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
+                <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
               </picture>
             </a>
           </li>
@@ -199,14 +199,6 @@
             <cite class="reviews__author-name">Анастасия Красильникова</cite>
             <span class="reviews__author-contact">@misssssiskras</span>
           </blockquote>
-          <!-- Еще один отзыв на потом когда реализуется слайдер -->
-          <!-- <blockquote class="reviews__item slider__item">
-            <p class="reviews__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, eros vitae ultricies venenatis, odio erat bibendum ex, et tempor.
-            </p>
-            <cite class="reviews__author-name">Вася Иванов</cite>
-            <span class="reviews__author-contact">@vasia</span>
-          </blockquote> -->
           <p class="reviews__toggles">
             <button class="reviews__toggle reviews__toggle--prev" type="button">Предыдущий отзыв</button>
             <button class="reviews__toggle reviews__toggle--next" type="button">Следующий отзыв</button>
@@ -226,11 +218,12 @@
             <a class="contacts__link link-mail" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </div>
           <div class="contacts__address">
-            <span class="contacts__name contacts__addr">адрес:</span>
+            <span class="contacts__name contacts__name--addr">адрес:</span>
             <p class="contacts__text">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
           </div>
         </div>
         <div class="contacts__map">
+          <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
@@ -238,9 +231,8 @@
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Магазин на карте">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003006!2d30.32085871595745!3d59.938719169054345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sua!4v1557658841792!5m2!1sru!2sua" width="322" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <picture>
           </picture>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003006!2d30.32085871595745!3d59.938719169054345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sua!4v1557658841792!5m2!1sru!2sua" width="322" height="457" style="border:0" allowfullscreen></iframe>
           <svg class="contacts__icon contacts__icon--marker" x="0px" y="0px" width="67px" height="100px">
             <use xlink:href="#icon-map-pin"/>
           </svg>
@@ -298,7 +290,7 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <div class="modal modal-wrapper modal-wrapper--closed">
+    <div class="modal modal--closed">
       <div class="modal__wrapper">
         <h2 class="modal__title">Добавить в корзину</h2>
         <span class="modal__text">Выберите размер:</span>
@@ -323,9 +315,6 @@
             <button class="form-send__button button close" type="submit">Добавить</button>
           </div>
         </form>
-        <!-- <button class="modal__close visually-hidden" type="button" value="Закрыть">
-          <span>Закрыть</span>
-        </button> -->
       </div>
     </div>
     <script src="js/main.min.js"></script>
