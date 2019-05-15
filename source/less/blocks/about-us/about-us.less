@@ -7,115 +7,98 @@
   .block-title-text();
   padding-bottom: 87px;
   /*margin-top: 60px;*/
-  padding-top: 34px;
+  padding-top: 40px;
 }
 
 .about-us__list {
   .ul-reset();
   font-size: 17px;
   line-height: 20px;
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-weight: 700;
   color: @title-text-color;
 
   li:first-child {
     width: 175px;
     padding-bottom: 82px;
     position: relative;
+  }
 
-    &::before {
-      .pseudo-elem();
-      top: -55px;
-      left: 8px;
-      width: 32px;
-      height: 37px;
-      background-image: url("../img/icon-feature-flower.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  /*Позиционирование заинлайненного*/
+  li:first-child svg {
+    .pseudo-elem();
+    top: -55px;
+    left: 8px;
+    width: 32px;
+    height: 37px;
   }
 
   li:nth-child(2) {
     width: 200px;
     padding-bottom: 83px;
     position: relative;
+  }
 
-    &::before {
-      .pseudo-elem();
-      top: -53px;
-      left: 0;
-      width: 47px;
-      height: 27px;
-      background-image: url("../img/icon-feature-money.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  li:nth-child(2) svg {
+    .pseudo-elem();
+    top: -53px;
+    left: 0;
+    width: 47px;
+    height: 27px;
   }
 
   li:nth-child(3) {
     width: 181px;
     padding-bottom: 83px;
     position: relative;
+  }
 
-    &::before {
-      .pseudo-elem();
-      top: -48px;
-      left: 7px;
-      width: 34px;
-      height: 27px;
-      background-image: url("../img/icon-feature-heart.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  li:nth-child(3) svg {
+    .pseudo-elem();
+    top: -48px;
+    left: 7px;
+    width: 34px;
+    height: 27px;
   }
 
   li:nth-child(4) {
     width: 211px;
     padding-bottom: 84px;
     position: relative;
+  }
 
-    &::before {
-      .pseudo-elem();
-      top: -51px;
-      left: 3px;
-      width: 35px;
-      height: 34px;
-      background-image: url("../img/icon-feature-ball.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  li:nth-child(4) svg {
+    .pseudo-elem();
+    top: -51px;
+    left: 3px;
+    width: 35px;
+    height: 34px;
   }
 
   li:nth-child(5) {
     width: 251px;
     padding-bottom: 82px;
     position: relative;
+  }
 
-    &::before {
-      .pseudo-elem();
-      top: -51px;
-      left: -5px;
-      width: 55px;
-      height: 23px;
-      background-image: url("../img/icon-feature-rocket.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  li:nth-child(5) svg {
+    .pseudo-elem();
+    top: -51px;
+    left: -5px;
+    width: 55px;
+    height: 23px;
   }
 
   li:last-child {
     width: 198px;
     position: relative;
+  }
 
-    &::before {
-      .pseudo-elem();
-      top: -52px;
-      left: 3px;
-      width: 33px;
-      height: 32px;
-      background-image: url("../img/icon-feature-gift.svg");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
+  li:last-child svg {
+    .pseudo-elem();
+    top: -52px;
+    left: 3px;
+    width: 33px;
+    height: 32px;
   }
 }
 
@@ -148,22 +131,22 @@
       width: 206px;
       margin-bottom: 30px;
       margin-right: 129px;
+    }
 
-      &::before {
-        top: -52px;
-        left: 9px;
-      }
+    li:first-child svg {
+      top: -52px;
+      left: 9px;
     }
 
     li:nth-child(2) {
       width: 235px;
       margin-bottom: 30px;
       margin-right: 99px;
+    }
 
-      &::before {
-        top: -54px;
-        left: 2px;
-      }
+    li:nth-child(2) svg {
+      top: -54px;
+      left: 2px;
     }
 
     li:nth-child(3) {
@@ -171,41 +154,41 @@
       margin-bottom: 79px;
       margin-right: 123px;
       padding-bottom: 0;
+    }
 
-      &::before {
-        top: -51px;
-        left: 8px;
-      }
+    li:nth-child(3) svg {
+      top: -51px;
+      left: 8px;
     }
 
     li:nth-child(4) {
       width: 248px;
       margin-bottom: 30px;
+    }
 
-      &::before {
-        top: -49px;
-        left: 3px;
-      }
+    li:nth-child(4) svg {
+      top: -49px;
+      left: 3px;
     }
 
     li:nth-child(5) {
       width: 295px;
       margin-bottom: 30px;
+    }
 
-      &::before {
-        top: -51px;
-        left: -6px;
-      }
+    li:nth-child(5) svg {
+      top: -51px;
+      left: -6px;
     }
 
     li:last-child {
       width: 233px;
       margin-bottom: 30px;
+    }
 
-      &::before {
-        top: -55px;
-        left: 2px;
-      }
+    li:last-child svg {
+      top: -55px;
+      left: 2px;
     }
   }
 

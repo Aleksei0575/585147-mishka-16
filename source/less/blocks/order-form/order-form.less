@@ -11,12 +11,10 @@
   margin: 0;
   padding: 0;
   border: none;
-  /*border-top: 1px solid @light-green;*/
 }
 
 .order-form__legend {
   position: relative;
-  /*padding-right: 27px;*/
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 16px;
@@ -38,10 +36,7 @@
 
   &--phone {
     margin-bottom: 10px;
-  }
-
-  &--other {
-    margin-bottom: 23px;
+    display: block;
   }
 
   &::after {
@@ -51,16 +46,21 @@
     left: 58px;
     width: 198px;
     height: 1px;
-    /*margin-left: 27px;*/
     background-color: @light-green;
   }
 
+  &--other {
+    margin-bottom: 23px;
+    display: block;
+  }
+
   &--email {
-    margin-bottom: 18px;
+    margin-bottom: 10px;
+    display: block;
 
     &::after {
-      left: 70px;
-      width: 188px;
+      left: 81px;
+      width: 177px;
     }
   }
 }
@@ -101,6 +101,25 @@
     }
   }
 
+  &--radio:hover + .order-form__label--radio {
+    &::after {
+      border: 2px solid #62d1ba;
+    }
+  }
+
+  &--radio:active + .order-form__label--radio {
+    &::after {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  &--radio:focus + .order-form__label--radio {
+    &::after {
+      border: 2px solid #62d1ba;
+      outline: 1px solid #58c8f7;
+    }
+  }
+
   &--radio:checked + .order-form__label--radio {
     &::before {
       .pseudo-elem();
@@ -121,6 +140,25 @@
       width: 36px;
       height: 35px;
       border: 2px solid @border-color;
+    }
+  }
+
+  &--checkbox:hover + .order-form__label--checkbox {
+    &::after {
+      border: 2px solid #62d1ba;
+    }
+  }
+
+  &--checkbox:active + .order-form__label--checkbox {
+    &::after {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  &--checkbox:focus + .order-form__label--checkbox {
+    &::after {
+      border: 2px solid #62d1ba;
+      outline: 1px solid #58c8f7;
     }
   }
 
@@ -146,6 +184,19 @@
     font-size: 17px;
     line-height: 18px;
     color: rgba(68, 68, 68, 0.3);
+
+    &:hover {
+      border-bottom: 2px solid #62d1ba;
+      color: #444444;
+    }
+
+    &:focus {
+      outline: 1px solid #58c8f7;
+    }
+
+    &:active {
+      color: #444444;
+    }
   }
 }
 
@@ -226,15 +277,19 @@
 .order-form__item-phone {
   position: relative;
 
-  &::before {
-    .pseudo-elem();
-    top: 9px;
-    right: 5px;
-    width: 25px;
-    height: 24px;
-    background: url("../img/icon-phone.svg") no-repeat 0 0;
-    opacity: 0.2;
+  &:hover .order-form__icon-phone {
+    fill: #46c1ae;
+    opacity: 1;
   }
+}
+
+.order-form__icon-phone {
+  .pseudo-elem();
+  top: 9px;
+  right: 5px;
+  width: 25px;
+  height: 24px;
+  opacity: 0.2;
 }
 
 .order-form__input-phonetext {
@@ -248,20 +303,39 @@
   font-size: 19px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
+
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+    color: #444444;
+  }
+
+  &:focus {
+    outline: 1px solid #58c8f7;
+  }
+
+  &:active {
+    color: #444444;
+  }
 }
 
 .order-form__item-email {
   position: relative;
+}
 
-  &::before {
-    .pseudo-elem();
-    top: 2px;
-    right: 5px;
-    width: 32px;
-    height: 27px;
-    background: url("../img/icon-mail.svg") no-repeat 0 0;
-    opacity: 0.2;
+.order-form__email-wrapper {
+  &:hover .order-form__icon-email {
+    fill: #46c1ae;
+    opacity: 1;
   }
+}
+
+.order-form__icon-email {
+  .pseudo-elem();
+  top: 7px;
+  right: 4px;
+  width: 32px;
+  height: 27px;
+  opacity: 0.2;
 }
 
 .order-form__input-text {
@@ -275,17 +349,44 @@
   font-size: 19px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
+
+  &:hover {
+    border-bottom: 2px solid #62d1ba;
+    color: #444444;
+  }
+
+  &:focus {
+    outline: 1px solid #58c8f7;
+  }
+
+  &:active {
+    color: #444444;
+  }
 }
 
 .order-form__input-textarea {
   width: 100%;
+  max-height: 143px;
   box-sizing: border-box;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   padding: 0;
   border: 2px solid @title-text-color;
   font-size: 17px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
+
+  &:hover {
+    border: 2px solid #62d1ba;
+    color: #444444;
+  }
+
+  &:focus {
+    outline: 1px solid #58c8f7;
+  }
+
+  &:active {
+    color: #444444;
+  }
 
   &::placeholder {
     width: 165px;
@@ -295,21 +396,23 @@
 }
 
 .order-form__sending {
-  margin-bottom: 58px;
+  margin-bottom: 55px;
 }
 
 .order-form__note {
   margin: 0;
   font-size: 14px;
   line-height: 16px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
 }
 
 .order-form__submit {
+  padding-top: 15px;
+  padding-bottom: 16px;
   padding-left: 45px;
   padding-right: 45px;
   min-width: 166px;
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+
   font-size: 17px;
   line-height: 16px;
   color: @text-color;
@@ -424,7 +527,6 @@
 
   .order-form__checkbox-wrapper {
     display: flex;
-    /*margin-bottom: 88px;*/
   }
 
   .order-form__list-checkbox {
@@ -443,7 +545,6 @@
     }
 
     li:nth-child(2) {
-      /*width: 120px;*/
       padding-left: 81px;
       padding-top: 0;
       margin-bottom: 25px;
@@ -458,7 +559,6 @@
     }
 
     li:nth-child(4) {
-      /*width: 120px;*/
       padding-left: 81px;
       padding-top: 0;
       margin-bottom: 25px;
@@ -473,7 +573,6 @@
     }
 
     li:nth-child(6) {
-      /*width: 120px;*/
       padding-left: 81px;
       padding-top: 0;
       margin-bottom: 25px;
@@ -545,11 +644,11 @@
 
   .order-form__item-phone {
     width: 486px;
+  }
 
-    &::before {
-      top: -1px;
-      right: 12px;
-    }
+  .order-form__icon-phone {
+    top: -1px;
+    right: 12px;
   }
 
   .order-form__input-phonetext {
@@ -563,7 +662,6 @@
   .order-form__email {
     padding-top: 4px;
     background-color: @line-color;
-    /*background-color: rgba(255, 0, 0, 0.2);*/
     padding-bottom: 16px;
   }
 
@@ -573,6 +671,11 @@
 
   .order-form__item-email {
     width: 486px;
+  }
+
+  .order-form__icon-email {
+    top: -1px;
+    right: 12px;
   }
 
   .order-form__input-text {
@@ -586,7 +689,6 @@
   /*Секция с полем textarea*/
   .order-form__textarea {
     padding-top: 50px;
-    /*background-color: rgba(255, 0, 0, 0.2);*/
     padding-bottom: 20px;
   }
 
@@ -599,8 +701,9 @@
   }
 
   .order-form__input-textarea {
-    margin-bottom: 9px;
-    font-size: 19px;
+    margin-bottom: 13px;
+    font-size: 13px;
+    max-height: 143px;
 
     &::placeholder {
       width: 366px;
@@ -612,9 +715,8 @@
   /*Секция с кнопкой отпраки*/
   .order-form__sending {
     padding-top: 14px;
-    /*background-color: rgba(255, 0, 0, 0.2);*/
     padding-bottom: 0;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
   }
 
   .order-form__sending-wrapper {
@@ -624,7 +726,6 @@
   }
 
   .order-form__note {
-    /*margin-top: 10px;*/
     padding-bottom: 0;
     font-size: 17px;
     line-height: 30px;
@@ -632,8 +733,8 @@
   }
 
   .order-form__submit {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     padding-right: 30px;
     padding-left: 30px;
   }
@@ -699,11 +800,11 @@
 
   .order-form__item-phone {
     width: 686px;
+  }
 
-    &::before {
-      top: -1px;
-      right: -5px;
-    }
+  .order-form__icon-phone {
+    top: -1px;
+    right: -5px;
   }
 
   /*Секция с полем ввода эл. почты*/
@@ -713,11 +814,11 @@
 
   .order-form__item-email {
     width: 686px;
+  }
 
-    &::before {
-      top: -2px;
-      right: -9px;
-    }
+  .order-form__icon-email {
+    top: -2px;
+    right: -9px;
   }
 
   /*Секция с полем textarea*/
@@ -731,6 +832,11 @@
 
   .order-form__item-area {
     width: 700px;
+  }
+
+  .order-form__input-textarea {
+    font-size: 19px;
+    max-height: 143px;
   }
 
   .order-form__sending-wrapper {

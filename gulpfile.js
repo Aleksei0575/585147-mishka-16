@@ -117,13 +117,13 @@ gulp.task("compress", function () {
 
 gulp.task("build", gulp.series(
   "clean",
-  "copy",
   "css",
   "images",
+  "webp",
+  "copy",
   "sprite",
   "html",
   "compress"
 ));
 
-// gulp.task("build", gulp.series("css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

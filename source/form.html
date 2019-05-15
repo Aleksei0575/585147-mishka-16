@@ -12,7 +12,6 @@
     <meta name="description" content="Интернет магазин милых вещиц для дома ручной работы">
   </head>
   <body class="global-style">
-    <body class="global-style">
     <div style="display: none">
       <include src="build/img/sprite.svg"></include>
     </div>
@@ -29,7 +28,7 @@
               <picture>
                 <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
+                <img class="main-navigation__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип сайта &laquo;Мишка&raquo;">
               </picture>
             </a>
           </li>
@@ -82,7 +81,7 @@
           <!-- Секция с радио-кнопками -->
             <fieldset class="order-form__radio-button">
               <div class="order-form__radio-wrapper container">
-                <legend class="order-form__legend order-form__legend--radio">Тип</legend>
+                <div class="order-form__legend order-form__legend--radio">Тип</div>
                 <ul class="order-form__list-radio">
                   <li class="order-form__item">
                     <input class="order-form__input order-form__input--radio visually-hidden" type="radio" name="toggle" value="accessory" id="accessory-choice" checked="">
@@ -98,7 +97,7 @@
           <!-- Секция с чекбоксами -->
             <fieldset class="order-form__checkbox-button">
               <div class="order-form__checkbox-wrapper container">
-                <legend class="order-form__legend order-form__legend--checkbox">Цвет</legend>
+                <div class="order-form__legend order-form__legend--checkbox">Цвет</div>
                 <ul class="order-form__list-checkbox">
                   <li class="order-form__item">
                     <input class="order-form__input order-form__input--checkbox visually-hidden" type="checkbox" name="white" value="color" id="color-white" checked="">
@@ -130,7 +129,7 @@
           <!-- Секция с полями ввода информации -->
             <fieldset class="order-form__name-user">
               <div class="order-form__user-wrapper container">
-                <legend class="order-form__legend order-form__legend--user">ФИО</legend>
+                <div class="order-form__legend order-form__legend--user">ФИО</div>
                 <ul class="order-form__list-user">
                   <li class="order-form__item">
                     <label class="order-form__label order-form__label--name" for="input-name">Имя:</label>
@@ -150,10 +149,12 @@
           <!-- Секция с полем ввода телефона -->
             <fieldset class="order-form__phone">
               <div class="order-form__phone-wrapper container">
-                <legend class="order-form__legend
-              order-form__legend--phone">тел</legend>
+                <label class="order-form__legend
+              order-form__legend--phone" for="input-phone">тел</label>
                 <div class="order-form__item-phone">
-                  <label class="order-form__label order-form__label--phone" for="input-phone"></label>
+                  <svg class="order-form__icon order-form__icon-phone" x="0px" y="0px" width="25px" height="24px">
+                    <use xlink:href="#icon-phone"/>
+                  </svg>
                   <input class="order-form__input order-form__input-phonetext order-form__input--tel" type="tel" name="phone" id="input-phone" pattern="\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
                 </div>
               </div>
@@ -161,9 +162,11 @@
           <!-- Секция с полем ввода эл. почты -->
             <fieldset class="order-form__email">
               <div class="order-form__email-wrapper container">
-                <legend class="order-form__legend order-form__legend--email">E-mail</legend>
+                <label class="order-form__legend order-form__legend--email" for="input-email">E-mail</label>
                 <div class="order-form__item-email">
-                  <label class="order-form__label order-form__label--email" for="input-email"></label>
+                  <svg class="order-form__icon order-form__icon-email" x="0px" y="0px" width="32px" height="27px">
+                    <use xlink:href="#icon-mail"/>
+                  </svg>
                   <input class="order-form__input order-form__input-text order-form__input--email" type="email" name="email" id="input-email" placeholder="Ваш Email*">
                 </div>
               </div>
@@ -171,9 +174,8 @@
           <!-- Секция с полем textarea -->
             <fieldset class="order-form__textarea">
               <div class="order-form__textarea-wrapper container">
-                <legend class="order-form__legend order-form__legend--other">Доп</legend>
+                <label class="order-form__legend order-form__legend--other" for="text-letter">Доп</label>
                 <div class="order-form__item-area">
-                  <label class="order-form__label order-form__label--textarea" for="text-letter"></label>
                   <textarea class="order-form__input-textarea" id="text-letter" name="letter" rows="8" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 </div>
               </div>
@@ -203,13 +205,27 @@
         <div class="main-footer__social social">
           <ul class="main-footer__list">
             <li class="main-footer__item">
-              <a class="main-footer__link main-footer__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="main-footer__link main-footer__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <svg class="main-footer__icon main-footer__icon--instagram" x="0px" y="0px" width="22px" height="21px">
+                  <use xlink:href="#icon-insta"/>
+                </svg>
+                Мы в Инстаграме
+              </a>
             </li>
             <li class="main-footer__item">
-              <a class="main-footer__link main-footer__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="main-footer__link main-footer__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <svg class="main-footer__icon main-footer__icon--facebook" x="0px" y="0px" width="15px" height="28px">
+                  <use xlink:href="#icon-fb"/>
+                </svg>
+                Мы в Фейсбуке
+              </a>
             </li>
             <li class="main-footer__item">
-              <a class="main-footer__link main-footer__link--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+              <a class="main-footer__link main-footer__link--twitter" href="https://www.twitter.com/htmlacademy">
+                <svg class="main-footer__icon main-footer__icon--twitter" x="0px" y="0px" width="23px" height="20px">
+                  <use xlink:href="#icon-twitter"/>
+                </svg>
+              Мы в Твиттере</a>
             </li>
           </ul>
         </div>
