@@ -14,25 +14,20 @@ navToggle.addEventListener("click", function() {
 });
 
 
-var byLink = document.querySelector(".button-js");
+var byLink = document.querySelectorAll(".button-js");
 var popup = document.querySelector(".modal--closed");
 var byClosed = popup.querySelector(".close");
 
-byLink.addEventListener("click", function (evt) {
+for (var i = 0; i < byLink.length; i++) {
+  var activeBtn = byLink[i];
+
+  activeBtn.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popup.classList.toggle("modal--closed");
+  });
+}
+
+byClosed.addEventListener("click", function(evt) {
   evt.preventDefault();
-  popup.classList.toggle("modal--closed");
+  popup.classList.add("modal--closed");
 });
-
-// for (var i = 0; i < order.length; i++) {
-//   var activeBtn = byLink[i];
-
-//   activeBtn.addEventListener('click', function(evt) {
-//     evt.preventDefault();
-//     popup.classList.toggle('modal--closed');
-//   });
-// }
-
-// byClosed.addEventListener('click', function(evt) {
-//   evt.preventDefault();
-//   popup.classList.add('modal--closed');
-// });
