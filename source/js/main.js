@@ -1,6 +1,10 @@
 var navMain = document.querySelector(".main-navigation");
 var navToggle = document.querySelector(".main-navigation__button");
 
+var byLink = document.querySelectorAll(".button-js");
+var popup = document.querySelector(".modal--closed");
+var byClosed = popup.querySelector(".close");
+
 navMain.classList.remove("main-navigation--nojs");
 
 navToggle.addEventListener("click", function() {
@@ -13,26 +17,16 @@ navToggle.addEventListener("click", function() {
   }
 });
 
+for (var i = 0; i < byLink.length; i++) {
+  var activeBtn = byLink[i];
 
-var byLink = document.querySelector(".button-js");
-var popup = document.querySelector(".modal--closed");
-var byClosed = popup.querySelector(".close");
+  activeBtn.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popup.classList.toggle("modal--closed");
+  });
+}
 
-byLink.addEventListener("click", function (evt) {
+byClosed.addEventListener("click", function(evt) {
   evt.preventDefault();
-  popup.classList.toggle("modal--closed");
+  popup.classList.add("modal--closed");
 });
-
-// for (var i = 0; i < order.length; i++) {
-//   var activeBtn = byLink[i];
-
-//   activeBtn.addEventListener('click', function(evt) {
-//     evt.preventDefault();
-//     popup.classList.toggle('modal--closed');
-//   });
-// }
-
-// byClosed.addEventListener('click', function(evt) {
-//   evt.preventDefault();
-//   popup.classList.add('modal--closed');
-// });
