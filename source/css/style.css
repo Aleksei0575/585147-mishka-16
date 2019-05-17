@@ -2835,21 +2835,20 @@ textarea {
   font-size: 17px;
   line-height: 18px;
   color: rgba(68, 68, 68, 0.3);
+  padding-top: 13px;
+  padding-left: 17px;
 }
 .order-form__input-textarea::-webkit-input-placeholder {
   width: 165px;
-  padding-top: 13px;
-  padding-left: 17px;
+}
+.order-form__input-textarea::-moz-placeholder {
+  width: 165px;
 }
 .order-form__input-textarea:-ms-input-placeholder {
   width: 165px;
-  padding-top: 13px;
-  padding-left: 17px;
 }
 .order-form__input-textarea::-ms-input-placeholder {
   width: 165px;
-  padding-top: 13px;
-  padding-left: 17px;
 }
 .order-form__input-textarea::placeholder {
   width: 165px;
@@ -3123,26 +3122,20 @@ textarea {
   .order-form__input-textarea {
     margin-bottom: 9px;
     font-size: 19px;
+    padding-top: 13px;
+    padding-left: 17px;
   }
   .order-form__input-textarea::-webkit-input-placeholder {
     width: 366px;
-    padding-top: 13px;
-    padding-left: 17px;
   }
   .order-form__input-textarea:-ms-input-placeholder {
     width: 366px;
-    padding-top: 13px;
-    padding-left: 17px;
   }
   .order-form__input-textarea::-ms-input-placeholder {
     width: 366px;
-    padding-top: 13px;
-    padding-left: 17px;
   }
   .order-form__input-textarea::placeholder {
     width: 366px;
-    padding-top: 13px;
-    padding-left: 17px;
   }
   /*Секция с кнопкой отпраки*/
   .order-form__sending {

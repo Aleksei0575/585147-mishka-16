@@ -51,13 +51,13 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .modal {
     width: 566px;
     height: 336px;
 
     top: 25%;
-    left: 30%;
+    left: 15%;
   }
 
   .modal__wrapper {
@@ -77,5 +77,11 @@
     margin-top: 14px;
     margin-bottom: 21px;
     font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal {
+    left: 30%;
   }
 }
