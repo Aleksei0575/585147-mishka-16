@@ -33,5 +33,3 @@ if(byLink.length) {
     popup.classList.add("modal--closed");
   });
 }
-
-
