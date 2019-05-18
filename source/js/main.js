@@ -3,7 +3,7 @@ var navToggle = document.querySelector(".main-navigation__button");
 
 var byLink = document.querySelectorAll(".button-js");
 var popup = document.querySelector(".modal--closed");
-var byClosed = popup.querySelector(".close");
+
 
 navMain.classList.remove("main-navigation--nojs");
 
@@ -17,16 +17,21 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-for (var i = 0; i < byLink.length; i++) {
-  var activeBtn = byLink[i];
+if(byLink.length) {
+  var byClosed = popup.querySelector(".close");
+  for (var i = 0; i < byLink.length; i++) {
+    var activeBtn = byLink[i];
 
-  activeBtn.addEventListener("click", function(evt) {
+    activeBtn.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      popup.classList.toggle("modal--closed");
+    });
+  }
+
+  byClosed.addEventListener("click", function(evt) {
     evt.preventDefault();
-    popup.classList.toggle("modal--closed");
+    popup.classList.add("modal--closed");
   });
 }
 
-byClosed.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popup.classList.add("modal--closed");
-});
+
