@@ -22,7 +22,7 @@ if(byLink.length) {
   for (var i = 0; i < byLink.length; i++) {
     var activeBtn = byLink[i];
 
-    activeBtn.addEventListener("click", function(evt) {
+    activeBtn("click", function(evt) {
       evt.preventDefault();
       popup.classList.toggle("modal--closed");
     });
